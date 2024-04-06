@@ -1,11 +1,29 @@
 ---
-
+import { Sprite } from 'astro-icon';
 ---
 <footer class="layout__footer footer">
   <div class="footer__copy">
-    Created by 8 Club. <a href="t.me/community_bot/club" class="link link--nav">Join us, fren</a>.
+    Created by 🎱 Club. <a href="t.me/community_bot/club" class="link link--nav">Join us, fren</a> 🚀
   </div>
-  <div class="footer__socials">
-    socials
+  <div class="footer__socials socials">
+    <ul class="socials__list">
+      <li class="socials__item">
+        <a href="https://fragment.com/numbers" class="socials__link link link--nav" title="Anonymous numbers on fragment.com">
+          <Sprite name="fragment" width="22" height="22" class="socials__icon" />
+          +888
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="https://t.me/anon_club" class="socials__link link link--nav" title="Telegram Channel">
+          <Sprite name="telegram" width="22" height="22" class="socials__icon" />
+        </a>
+      </li>
+      <li class="socials__item">
+        <a href="https://x.com/anonclub8" class="socials__link link link--nav" title="Read us on X (ex Twitter)">
+          <Sprite name="x" width="22" height="22" class="socials__icon" />
+        </a>
+      </li>
+    </ul>
   </div>
 </footer>
+<Sprite.Provider />

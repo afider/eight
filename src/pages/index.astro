@@ -1,15 +1,32 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ImgSource from '@components/ImgSource.astro';
+import { Sprite } from 'astro-icon';
 import logo from '@images/8.jpg';
 
 const pageTitle = "ANON";
 ---
 
 <BaseLayout title={pageTitle}>
-    <div class="logo-pic">
-      <ImgSource img={logo} width="732" height="680" imgAlt="Logo ANON. Magic 8 ball with glow effect at the edges." classNames="logo-pic__img" />
+    <div class="hero">
+      <ImgSource img={logo} width="732" height="680" imgAlt="Logo ANON. Magic 8 ball with glow effect at the edges." classNames="hero__img" />
+      <h1 class="hero__title">ANON Token</h1>
+      <div class="hero__body">
+        <p class="hero__msg">
+          <span class="hero__888">888 888 888</span> 
+          <span class="hero__text">Opportunities to Remain</span> 
+          <span class="hero__anon">ANON</span> 
+        </p>
+      </div>
+      <div class="hero__footer">
+        <a href="https://dedust.io/swap/TON/ANON" class="button">
+          <Sprite name="dedust" width="22" height="22" class="socials__icon" />
+          Buy on DeDust.io
+        </a>
+        <a href="https://app.ston.fi/swap?ft=TON&tt=ANON" class="button">
+          <Sprite name="stonfi" width="22" height="22" class="socials__icon" />
+          Buy on STON.fi
+        </a>
+      </div>
     </div>
-  <h1>ANON</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perferendis, quos inventore recusandae laudantium a, sit impedit repudiandae eaque iusto quibusdam optio officiis corrupti molestias? Explicabo, sed voluptatibus? Molestias, rerum!</p>
 </BaseLayout>

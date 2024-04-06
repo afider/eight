@@ -1,0 +1,71 @@
+@keyframes move {
+
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2vh;
+
+  &__img {
+    display: block;
+    width: 280px;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    letter-spacing: 2px;
+    margin-bottom: 106px;
+    @include sr-only;
+  }
+
+  &__msg {
+    letter-spacing: 2px;
+    @include font(70px, 48px, 900);
+  }
+
+  &__888 {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    @include font(88px, 88px, 600);
+  }
+
+  &__text {
+    display: block;
+    color: transparent;
+    background-image: linear-gradient(
+      92deg,
+      #391f69,
+      #732b9b,
+      #e74bb8,
+      #391f69
+    );
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move 5s linear infinite;
+    margin-bottom: 10px;
+    @include font(88px, 88px, 900);
+  }
+
+  &__anon {
+    display: block;
+    text-align: center;
+    @include font(100px, 120px, 900);
+  }
+
+  &__footer {
+    padding-top: 80px;
+    display: flex;
+    gap: 40px;
+  }
+}

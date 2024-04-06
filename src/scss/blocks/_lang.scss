@@ -1,12 +1,8 @@
 .lang {
-  @include font(16px, 16px);
+  @include font(12px, 12px);
 
   @include media-breakpoint-up(sm) {
-    @include font(20px, 20px);
-  }
-
-  @include media-breakpoint-up(md) {
-    @include font(24px, 24px);
+    @include font(16px, 16px);
   }
 
   &__list {
@@ -20,10 +16,6 @@
     @include media-breakpoint-up(md) {
       gap: 16px;
     }
-  }
-
-  &__item {
-    
   }
 
   &__link {
