@@ -10,7 +10,7 @@ const currentPageUrl = Astro.url.pathname;
       (getLang(currentPageUrl) === 'en') && 
       (
       <div class="footer__copy">
-        Created by 🎱 Club. <a href="t.me/community_bot/club" class="link link--nav">Join us, fren</a> 🚀
+        <span class="footer__author">Created by 🎱 Club.</span> <a href="t.me/community_bot/club" class="link link--nav">Join us, fren</a> 🚀
       </div>
       )
     }
@@ -19,7 +19,7 @@ const currentPageUrl = Astro.url.pathname;
       (getLang(currentPageUrl) === 'ru') && 
       (
       <div class="footer__copy">
-        Создано 🎱 Club. <a href="t.me/community_bot/club" class="link link--nav">Присоединяйся к нам, друг</a> 🚀
+        <span class="footer__author">Создано 🎱 Club.</span> <a href="t.me/community_bot/club" class="link link--nav">Присоединяйся к нам, друг</a> 🚀
       </div>
       )
     }
@@ -28,7 +28,7 @@ const currentPageUrl = Astro.url.pathname;
       (getLang(currentPageUrl) === 'ua') && 
       (
       <div class="footer__copy">
-        Створено 🎱 Club. <a href="t.me/community_bot/club" class="link link--nav">Приєднуйся до нас, друже</a> 🚀
+        <span class="footer__author">Створено 🎱 Club.</span> <a href="t.me/community_bot/club" class="link link--nav">Приєднуйся до нас, друже</a> 🚀
       </div>
       )
     }
