@@ -7,6 +7,8 @@ export function getLang(currentPageUrl: string): string {
     lang = 'ru';
   } else if (currentPageUrl.startsWith("/ua/")) {
     lang = 'ua';
+  } else if (currentPageUrl.startsWith("/cn/")) {
+    lang = 'cn';
   }
   return lang;
 }

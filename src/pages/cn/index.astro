@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ImgSource from '@components/ImgSource.astro';
+import { Sprite } from 'astro-icon';
+import logo from '@images/8.jpg';
+import xRocket from '@images/xrocket.jpg';
+
+const pageTitle = "ANON";
+---
+
+<BaseLayout title={pageTitle}>
+    <div class="hero">
+      <ImgSource img={logo} width="732" height="680" imgAlt="Logo ANON. Magic 8 ball with glow effect at the edges." classNames="hero__img" />
+      <h1 class="hero__title">ANON</h1>
+      <div class="hero__body">
+        <p class="hero__msg">
+          <span class="hero__888">888 888 888</span> 
+          <span class="hero__text">保持匿名的机会</span> 
+          <span class="hero__anon">ANON</span> 
+        </p>
+      </div>
+      <div class="hero__footer">
+        <a href="https://dedust.io/swap/TON/ANON" class="button">
+          <Sprite name="dedust" width="40" height="40" class="button__icon" />
+          购买 DeDust.io
+        </a>
+        <a href="https://app.ston.fi/swap?ft=TON&tt=ANON" class="button">
+          <Sprite name="stonfi" width="40" height="40" class="button__icon" />
+          购买 STON.fi
+        </a>
+        <a href="https://t.me/xrocket/cex?startapp=trade-ANON-TON" class="button">
+          <ImgSource img={xRocket} width="200" height="200" imgAlt="" classNames="button__icon button__icon--img" />
+          购买 xRocket
+        </a>
+      </div>
+    </div>
+</BaseLayout>
