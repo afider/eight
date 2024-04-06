@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ImgSource from '@components/ImgSource.astro';
+import logo from '@images/8.jpg';
+
+const pageTitle = "ANON";
+---
+
+<BaseLayout title={pageTitle}>
+    <div class="logo-pic">
+      <ImgSource img={logo} width="732" height="680" imgAlt="Logo ANON. Magic 8 ball with glow effect at the edges." classNames="logo-pic__img" />
+    </div>
+  <h1>ANON</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perferendis, quos inventore recusandae laudantium a, sit impedit repudiandae eaque iusto quibusdam optio officiis corrupti molestias? Explicabo, sed voluptatibus? Molestias, rerum!</p>
+</BaseLayout>

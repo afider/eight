@@ -1,0 +1,36 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+picture {
+  display: block;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--root-color-system-active);
+}
+
+::selection {
+  background-color: var(--root-color-secondary);
+  color: var(--root-color-primary);
+}
