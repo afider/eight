@@ -13,17 +13,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2vh;
 
   &__img {
     display: block;
-    width: 280px;
-    margin-bottom: 50px;
+    width: 240px;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      width: 280px;
+      margin-bottom: 50px;
+    }
   }
 
   &__title {
-    letter-spacing: 2px;
-    margin-bottom: 106px;
     @include sr-only;
   }
 
@@ -36,12 +38,21 @@
     display: block;
     text-align: center;
     margin-bottom: 20px;
-    @include font(88px, 88px, 600);
+    @include font(40px, 1, 600);
+
+    @include media-breakpoint-up(sm) {
+      @include font(66px, 1, 600);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(88px, 1, 600);
+    }
   }
 
   &__text {
     display: block;
     color: transparent;
+    text-align: center;
     background-image: linear-gradient(
       92deg,
       #391f69,
@@ -54,18 +65,49 @@
     -webkit-background-clip: text;
     animation: move 5s linear infinite;
     margin-bottom: 10px;
-    @include font(88px, 88px, 900);
+    @include font(30px, 1.4, 900);
+
+    @include media-breakpoint-up(sm) {
+      @include font(44px, 1.4, 900);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(55px, 1.4, 900);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(88px, 1.4, 900);
+    }
   }
 
   &__anon {
     display: block;
     text-align: center;
-    @include font(100px, 120px, 900);
+    @include font(66px, 1, 900);
+
+    @include media-breakpoint-up(sm) {
+      @include font(88px, 1, 900);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(100px, 1, 900);
+    }
   }
 
   &__footer {
-    padding-top: 80px;
+    padding-top: 40px;
+    margin-bottom: 80px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: 60px;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: 80px;
+    }
   }
 }

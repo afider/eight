@@ -1,10 +1,11 @@
 .button {
   --button-color: var(--root-color-secondary);
   --button-color-bg: var(--root-color-primary);
+  --button-color-bg-hover: var(--root-color-accent-deep);
 
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   border: none;
   border-radius: 500px;
   padding: 20px 32px;
@@ -12,7 +13,19 @@
   color: var(--button-color);
   background-color: var(--button-color-bg);
   position: relative;
-  @include font(24px, 24px);
+  transition-property: background-color;
+  transition-duration: var(--root-animation-duration);
+  @include font(18px, 1);
+  white-space: nowrap;
+  width: 100%;
+  max-width: 300px;
+
+  @include media-breakpoint-up(md) {
+    width: auto;
+    max-width: none;
+    @include font(24px, 1);
+  }
+  
 
   &::before {
     content: '';
@@ -26,9 +39,28 @@
       #732b9b,
       #e74bb8);
     -webkit-mask:
-    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+  transition-property: opacity;
+  transition-duration: var(--root-animation-duration);
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+
+    &--img {
+      border-radius: 8px;
+    }
+  }
+
+  @include hover {
+    background-color: var(--button-color-bg-hover);
+
+    &::before {
+      opacity: 0;
+    }
   }
 }

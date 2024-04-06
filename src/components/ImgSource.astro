@@ -51,7 +51,6 @@ const picX2Avif = img ? await getImage({ src: img, format: 'avif'}) : fakeImgObj
 <Fragment set:html={`<source srcset="${picWebp.src}, ${picX2Webp.src} 2x" media="(prefers-color-scheme: light)" type="image/webp" data-light />`} /> : 
 <Fragment set:html={`<source srcset="${picWebp.src}, ${picX2Webp.src} 2x" type="image/webp" />`} /> }
 
-{imgAlt.trim() ? '' : <div class="warning">У изображения не может быть пустого атрибута Alt.</div>}
 {img ? '' : <div class="warning">Не указан объект с изображением</div>}
 
 <img srcset={`${picX2.src} 2x`} src={pic.src} {...pic.attributes} alt={imgAlt} class={classNames} />

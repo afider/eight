@@ -1,0 +1,14 @@
+---
+export function getLang(currentPageUrl: string): string {
+
+  let lang = 'en';
+
+  if (currentPageUrl.startsWith("/ru/")) {
+    lang = 'ru';
+  } else if (currentPageUrl.startsWith("/ua/")) {
+    lang = 'ua';
+  }
+  return lang;
+}
+---
+

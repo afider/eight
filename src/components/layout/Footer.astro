@@ -1,10 +1,39 @@
 ---
 import { Sprite } from 'astro-icon';
+import { getLang } from '@utils/GetLang.astro';
+
+const currentPageUrl = Astro.url.pathname;
 ---
 <footer class="layout__footer footer">
-  <div class="footer__copy">
-    Created by 🎱 Club. <a href="t.me/community_bot/club" class="link link--nav">Join us, fren</a> 🚀
-  </div>
+
+    {
+      (getLang(currentPageUrl) === 'en') && 
+      (
+      <div class="footer__copy">
+        Created by 🎱 Club. <a href="t.me/community_bot/club" class="link link--nav">Join us, fren</a> 🚀
+      </div>
+      )
+    }
+  
+    {
+      (getLang(currentPageUrl) === 'ru') && 
+      (
+      <div class="footer__copy">
+        Создано 🎱 Club. <a href="t.me/community_bot/club" class="link link--nav">Присоединяйся к нам, друг</a> 🚀
+      </div>
+      )
+    }
+
+    {
+      (getLang(currentPageUrl) === 'ua') && 
+      (
+      <div class="footer__copy">
+        Створено 🎱 Club. <a href="t.me/community_bot/club" class="link link--nav">Приєднуйся до нас, друже</a> 🚀
+      </div>
+      )
+    }
+    
+  
   <div class="footer__socials socials">
     <ul class="socials__list">
       <li class="socials__item">
