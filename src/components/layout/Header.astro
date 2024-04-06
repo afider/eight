@@ -2,6 +2,8 @@
 import { getLang } from '@utils/GetLang.astro';
 const currentPageUrl = Astro.url.pathname;
 
+
+
 ---
 <div class="layout__header header">
   <a href="/" class="header__logo logo">
@@ -14,10 +16,13 @@ const currentPageUrl = Astro.url.pathname;
           (getLang(currentPageUrl) === 'en') && 
           (
           <li class="lang__item">
-          <a href="/ru/" class="lang__link link link--nav">RU</a>
+            <a href="/ru/" class="lang__link link link--nav">RU</a>
           </li>
           <li class="lang__item">
             <a href="/ua/" class="lang__link link link--nav">UA</a>
+          </li>
+          <li class="lang__item">
+            <a href="/cn/" class="lang__link link link--nav">中文</a>
           </li>
           )
         }
@@ -31,6 +36,9 @@ const currentPageUrl = Astro.url.pathname;
           <li class="lang__item">
             <a href="/ua/" class="lang__link link link--nav">UA</a>
           </li>
+          <li class="lang__item">
+            <a href="/cn/" class="lang__link link link--nav">中文</a>
+          </li>
           )
         }
 
@@ -38,7 +46,25 @@ const currentPageUrl = Astro.url.pathname;
           (getLang(currentPageUrl) === 'ua') && 
           (
           <li class="lang__item">
-          <a href="/" class="lang__link link link--nav">EN</a>
+            <a href="/" class="lang__link link link--nav">EN</a>
+          </li>
+          <li class="lang__item">
+            <a href="/ru/" class="lang__link link link--nav">RU</a>
+          </li>
+          <li class="lang__item">
+            <a href="/cn/" class="lang__link link link--nav">中文</a>
+          </li>
+          )
+        }
+
+        {
+          (getLang(currentPageUrl) === 'cn') && 
+          (
+          <li class="lang__item">
+            <a href="/" class="lang__link link link--nav">EN</a>
+          </li>
+          <li class="lang__item">
+            <a href="/ua/" class="lang__link link link--nav">UA</a>
           </li>
           <li class="lang__item">
             <a href="/ru/" class="lang__link link link--nav">RU</a>
