@@ -9,19 +9,113 @@
   }
 }
 
+@keyframes glowing {
+
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .hero {
+  --hero-color-bg: var(--root-color-primary);
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  &__img {
-    display: block;
-    width: 220px;
+  &__ball {
+    background: var(--hero-color-bg);
+    position: relative;
+    z-index: 0;
+    border-radius: 50%;
     margin-bottom: 20px;
 
     @include media-breakpoint-up(sm) {
-      width: 230px;
       margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__ball,
+  &__img {
+    width: 200px;
+    height: 200px;
+
+    @include media-breakpoint-up(md) {
+      width: 240px;
+      height: 240px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 250px;
+      height: 250px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 260px;
+      height: 260px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+  &__ball::before {
+    content: '';
+    background: linear-gradient(
+      45deg,
+      #391f69,
+      #732b9b,
+      #e74bb8,
+      #391f69
+    );
+    position: absolute;
+    top: -10px;
+    left: -6px;
+    background-size: 400%;
+    z-index: -1;
+    will-change: filter;
+    filter: blur(20px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 90s linear infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50%;
+  }
+
+  &__ball::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+  }
+
+  &__img {
+    display: block;
+    width: 220px;
+    border-radius: 50%;
+
+    @include media-breakpoint-up(sm) {
+      width: 230px;
     }
 
     @include media-breakpoint-up(md) {
@@ -135,7 +229,7 @@
     }
 
     @include media-breakpoint-up(xxl) {
-      @include font(88px, 1, 900);
+      @include font(120px, 1, 900);
     }
   }
 
