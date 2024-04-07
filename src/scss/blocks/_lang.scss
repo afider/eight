@@ -5,6 +5,7 @@
 
   position: relative;
   color: var(--lang-color);
+  z-index: 1;
 
   &__selected {
     display: flex;
