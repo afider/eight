@@ -5,6 +5,7 @@
 
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   border: none;
   border-radius: 500px;
@@ -15,17 +16,22 @@
   position: relative;
   transition-property: background-color;
   transition-duration: var(--root-animation-duration);
-  @include font(18px, 1);
+  @include font(16px, 1);
   white-space: nowrap;
   width: 100%;
   max-width: 300px;
 
+  @include media-breakpoint-up(sm) {
+    width: auto;
+    max-width: none;
+    @include font(18px, 1);
+  }
+
   @include media-breakpoint-up(md) {
     width: auto;
     max-width: none;
-    @include font(24px, 1);
+    @include font(22px, 1);
   }
-  
 
   &::before {
     content: '';
@@ -48,12 +54,17 @@
   }
 
   &__icon {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
 
     &--img {
       border-radius: 8px;
     }
+  }
+
+  &__icon-img {
+    width: 28px;
+    height: 28px;
   }
 
   @include hover {

@@ -16,12 +16,28 @@
 
   &__img {
     display: block;
-    width: 240px;
-    margin-bottom: 30px;
+    width: 220px;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(sm) {
+      width: 230px;
+      margin-bottom: 30px;
+    }
 
     @include media-breakpoint-up(md) {
+      width: 240px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 250px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 260px;
+    }
+
+    @include media-breakpoint-up(xxl) {
       width: 280px;
-      margin-bottom: 50px;
     }
   }
 
@@ -41,10 +57,18 @@
     @include font(40px, 1, 600);
 
     @include media-breakpoint-up(sm) {
-      @include font(66px, 1, 600);
+      @include font(44px, 1, 600);
     }
 
     @include media-breakpoint-up(lg) {
+      @include font(55px, 1, 600);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(66px, 1, 600);
+    }
+
+    @include media-breakpoint-up(xxl) {
       @include font(88px, 1, 600);
     }
   }
@@ -64,18 +88,27 @@
     background-clip: text;
     -webkit-background-clip: text;
     animation: move 5s linear infinite;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     @include font(30px, 1.4, 900);
 
     @include media-breakpoint-up(sm) {
-      @include font(44px, 1.4, 900);
+      margin-bottom: 30px;
+      @include font(40px, 1.4, 900);
     }
 
     @include media-breakpoint-up(md) {
-      @include font(55px, 1.4, 900);
+      @include font(44px, 1.4, 900);
     }
 
     @include media-breakpoint-up(lg) {
+      @include font(55px, 1.4, 900);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(66px, 1.4, 900);
+    }
+
+    @include media-breakpoint-up(xxl) {
       @include font(88px, 1.4, 900);
     }
   }
@@ -83,31 +116,53 @@
   &__anon {
     display: block;
     text-align: center;
-    @include font(66px, 1, 900);
+    @include font(48px, 1, 900);
 
     @include media-breakpoint-up(sm) {
-      @include font(88px, 1, 900);
+      @include font(55px, 1, 900);
     }
 
     @include media-breakpoint-up(md) {
-      @include font(100px, 1, 900);
+      @include font(60px, 1, 900);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(66px, 1, 900);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(77px, 1, 900);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(88px, 1, 900);
     }
   }
 
   &__footer {
-    padding-top: 40px;
+    padding-top: 30px;
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 24px;
 
     @include media-breakpoint-up(sm) {
-      padding-top: 60px;
+      padding-top: 40px;
+      gap: 30px;
     }
 
     @include media-breakpoint-up(md) {
-      padding-top: 80px;
+      padding-top: 50px;
+      gap: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 60px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-top: 70px;
     }
   }
 }
