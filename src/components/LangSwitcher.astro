@@ -4,9 +4,9 @@ const currentPageUrl = Astro.url.pathname;
 
 import { Sprite } from 'astro-icon';
 ---
-<div class="lang">
+<div class="lang" data-dropdown>
   <Sprite.Provider />
-  <div class="lang__selected">
+  <div class="lang__selected" data-dropdown-ctrl>
     {(getLang(currentPageUrl) === 'en') && (<Sprite name="flag-gb" width="20" height="20" class="lang__flag" /><span class="lang__name">ENG</span>)}
     {(getLang(currentPageUrl) === 'ru') && (<Sprite name="flag-ru" width="20" height="20" class="lang__flag" /><span class="lang__name">РУС</span>)}
     {(getLang(currentPageUrl) === 'ua') && (<Sprite name="flag-ua" width="20" height="20" class="lang__flag" /><span class="lang__name">УКР</span>)}
