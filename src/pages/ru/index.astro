@@ -2,7 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ImgSource from '@components/ImgSource.astro';
 import { Sprite } from 'astro-icon';
-import logo from '@images/8.jpg';
+import logo from '@images/888888888.jpg';
 import xRocket from '@images/xrocket.jpg';
 
 const pageTitle = "ANON";
@@ -10,7 +10,9 @@ const pageTitle = "ANON";
 
 <BaseLayout title={pageTitle}>
     <div class="hero">
-      <ImgSource img={logo} width="732" height="680" imgAlt="Logo ANON. Magic 8 ball with glow effect at the edges." classNames="hero__img" />
+      <div class="hero__ball">
+        <ImgSource img={logo} width="640" height="640" imgAlt="Logo ANON. Magic 8 ball with glow effect at the edges." classNames="hero__img" />
+      </div>
       <h1 class="hero__title">Токен ANON</h1>
       <div class="hero__body">
         <p class="hero__msg">
