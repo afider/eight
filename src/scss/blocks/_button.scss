@@ -16,10 +16,10 @@
   position: relative;
   transition-property: background-color;
   transition-duration: var(--root-animation-duration);
-  @include font(16px, 1);
   white-space: nowrap;
   width: 100%;
   max-width: 300px;
+  @include font(16px, 1);
 
   @include media-breakpoint-up(sm) {
     width: auto;
@@ -47,10 +47,10 @@
     -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  transition-property: opacity;
-  transition-duration: var(--root-animation-duration);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition-property: opacity;
+    transition-duration: var(--root-animation-duration);
   }
 
   &__icon {
@@ -58,7 +58,7 @@
     height: 28px;
 
     &--img {
-      border-radius: 8px;
+      border-radius: 50%;
     }
   }
 
