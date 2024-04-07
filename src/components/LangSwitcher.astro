@@ -1,0 +1,44 @@
+---
+import { getLang } from '@utils/GetLang.astro';
+const currentPageUrl = Astro.url.pathname;
+
+import { Sprite } from 'astro-icon';
+---
+<div class="lang">
+  <Sprite.Provider />
+  <div class="lang__selected">
+    {(getLang(currentPageUrl) === 'en') && (<Sprite name="flag-gb" width="20" height="20" class="lang__flag" /><span class="lang__name">ENG</span>)}
+    {(getLang(currentPageUrl) === 'ru') && (<Sprite name="flag-ru" width="20" height="20" class="lang__flag" /><span class="lang__name">РУС</span>)}
+    {(getLang(currentPageUrl) === 'ua') && (<Sprite name="flag-ua" width="20" height="20" class="lang__flag" /><span class="lang__name">УКР</span>)}
+    {(getLang(currentPageUrl) === 'cn') && (<Sprite name="flag-cn" width="20" height="20" class="lang__flag" /><span class="lang__name">中文</span>)}
+    <Sprite name="arrow-down" width="14" height="14" class="lang__arrow" />
+  </div>
+  <div class="lang__dropdown">
+    <ul class="lang__list">
+      <li class={`lang__item ${(getLang(currentPageUrl) === 'en') && '_active'}`}>
+        <a href="/" class="lang__link">
+          English
+          <Sprite name="checked" width="16" height="16" class="lang__checked" />
+        </a>
+      </li>
+      <li class={`lang__item ${(getLang(currentPageUrl) === 'ru') && '_active'}`}>
+        <a href="/ru/" class="lang__link">
+          Русский
+          <Sprite name="checked" width="16" height="16" class="lang__checked" />
+        </a>
+      </li>
+      <li class={`lang__item ${(getLang(currentPageUrl) === 'ua') && '_active'}`}>
+        <a href="/ua/" class="lang__link">
+          Українська
+          <Sprite name="checked" width="16" height="16" class="lang__checked" />
+        </a>
+      </li>
+      <li class={`lang__item ${(getLang(currentPageUrl) === 'cn') && '_active'}`}>
+        <a href="/cn/" class="lang__link">
+          中文
+          <Sprite name="checked" width="16" height="16" class="lang__checked" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

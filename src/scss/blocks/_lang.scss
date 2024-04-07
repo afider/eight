@@ -1,25 +1,94 @@
 .lang {
-  @include font(12px, 12px);
+  --lang-color: var(--root-color-secondary);
+  --lang-color-bg: var(--root-color-primary-accent);
+  --lang-color-item-bg-hover: var(--root-color-hover-on-gradient);
 
-  @include media-breakpoint-up(sm) {
-    @include font(16px, 16px);
+  position: relative;
+  color: var(--lang-color);
+
+  &__selected {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 300px;
+    text-decoration: none;
+    transition-property: background-;
+    transition-duration: var(--root-animation-duration);
+    position: relative;
+    cursor: default;
+    z-index: 1;
+    @include font(14px, 14px);
+
+    @include media-breakpoint-up(sm) {
+      @include font(16px, 16px);
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    right: -8px;
+    top: 0;
+    margin-top: -8px;
+    background: linear-gradient(17deg, rgba(1,0,13,1) 0%, rgba(39,5,65,1) 82%, rgba(40,3,57,1) 100%);
+    padding: 12px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    border-radius: 24px;
+    width: 240px;
+    border: 2px solid #fdfdfd15;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: var(--root-animation-duration);
+
+    @include media-breakpoint-up(md) {
+      right: -12px;
+      margin-top: -12px;
+    }
+  }
+
+  &:hover &__dropdown {
+    opacity: 1;
+    visibility: visible;
   }
 
   &__list {
-    display: flex;
-    gap: 8px;
-
-    @include media-breakpoint-up(sm) {
-      gap: 10px;
-    }
-
-    @include media-breakpoint-up(md) {
-      gap: 16px;
-    }
+    display: grid;
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 20px;
+    border-radius: 24px;
+    text-decoration: none;
+    color: var(--lang-color);
+    transition-property: background-color;
+    transition-duration: var(--root-animation-duration);
+
+    @include hover {
+      background-color: var(--lang-color-item-bg-hover);
+    }
+  }
+
+  &__flag {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__checked {
+    display: none;
+  }
+
+  &__item._active &__checked {
     display: block;
-    padding: 4px;
   }
 }
