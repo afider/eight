@@ -4,7 +4,9 @@
   --layout-side-gap: var(--root-side-gap);
   --layout-max-width: 1400px;
 
-  background-color: var(--layout-color-bg);
+  background: linear-gradient(180deg, #242424 0%, #0C0C0C 38.5%, #000000 100%);
+
+
   color: var(--layout-color);
   font-family: var(--root-font-family-base);
 

@@ -10,7 +10,7 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px
 );
-$basic-font-family: 'Roboto', sans-serif;
+$basic-font-family: 'Inter', sans-serif;
 $animation-speed: 300ms;
 $animation-function: ease;
 $page-max-width: 1200px;
@@ -18,6 +18,7 @@ $page-max-width: 1200px;
 :root {
   // Light Theme Colors
   --root-color-primary: #000;
+  --root-color-primary-help: #1B1B1B;
   --root-color-primary-accent: #100b11;
   --root-color-secondary: #fff;
   --root-color-accent: #e28df7;
@@ -40,7 +41,7 @@ $page-max-width: 1200px;
   --root-color-main-bg: var(--root-color-primary);
 
   // Font
-  --root-font-family-base: 'Roboto', sans-serif;
+  --root-font-family-base: 'Inter', sans-serif;
 
   // Animations
   --root-animation-delay: 0.15s;

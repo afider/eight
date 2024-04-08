@@ -1,9 +1,5 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import ImgSource from '@components/ImgSource.astro';
-import { Sprite } from 'astro-icon';
-import logo from '@images/888888888.jpg';
-import xRocket from '@images/xrocket.jpg';
 
 const pageTitle = "ANON";
 ---
@@ -11,31 +7,36 @@ const pageTitle = "ANON";
 <BaseLayout title={pageTitle}>
     <div class="hero">
       <div class="hero__ball">
-        <ImgSource img={logo} width="640" height="640" imgAlt="Logo ANON. Magic 8 ball with glow effect at the edges." classNames="hero__img" />
+        <svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="108" cy="108" r="108" fill="black"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M100.77 110.815C128.259 98.0363 142.309 69.9661 132.152 48.1186C121.996 26.2712 91.4786 18.9197 63.9903 31.6986C36.502 44.4775 22.4518 72.5478 32.6084 94.3952C42.7649 116.243 73.2821 123.594 100.77 110.815ZM63.5601 65.289C61.9234 64.3504 60.6292 63.0508 59.8203 61.4095C56.776 55.2324 61.7568 46.5539 70.9453 42.0254C80.1337 37.4969 90.0504 38.8333 93.0947 45.0104C95.0551 48.988 93.6878 54.0028 90.0122 58.2789C93.7032 59.6346 96.6998 62.0874 98.3869 65.5106C102.57 73.9974 97.1194 85.2345 86.2137 90.6093C75.3079 95.9841 63.0764 93.4614 58.8937 84.9746C55.831 78.7603 57.9331 71.0713 63.5601 65.289Z" fill="white"/>
+          <path d="M80.4924 49.7767C81.553 52.0057 79.9692 55.1313 76.9547 56.758C73.9403 58.3847 70.6368 57.8964 69.5761 55.6674C68.5155 53.4384 70.0993 50.3127 73.1138 48.6861C76.1282 47.0594 79.4317 47.5477 80.4924 49.7767Z" fill="white"/>
+          <path d="M84.4418 69.6449C86.2346 72.7356 84.372 77.1647 80.2814 79.5376C76.1908 81.9105 71.4213 81.3285 69.6285 78.2378C67.8356 75.1471 69.6983 70.718 73.7888 68.3451C77.8794 65.9723 82.6489 66.5542 84.4418 69.6449Z" fill="white"/>
+          </svg>
       </div>
-      <h1 class="hero__title">ANON Token</h1>
       <div class="hero__body">
-        <p class="hero__msg">
-          <span class="hero__888">888 888 888</span> 
-          <span class="hero__text">Opportunities to&nbsp;Remain</span> 
-          <span class="hero__anon">ANON</span> 
-        </p>
+        <h1 class="hero__msg">
+          <span class="hero__msg-item">Introduce</span> <br>
+          <span class="hero__msg-item">Self-Regulated</span> <br>
+          <span class="hero__msg-item">Community</span>
+        </h1>
       </div>
       <div class="hero__footer">
-        <a href="https://dedust.io/swap/TON/ANON" class="button">
-          <Sprite name="dedust" width="28" height="28" class="button__icon" />
-          Buy on DeDust.io
-        </a>
-        <a href="https://app.ston.fi/swap?ft=TON&tt=ANON" class="button">
-          <Sprite name="stonfi" width="28" height="28" class="button__icon" />
-          Buy on STON.fi
-        </a>
-        <a href="https://t.me/xrocket/cex?startapp=trade-ANON-TON" class="button">
-          <span class="button__icon-img">
-            <ImgSource img={xRocket} width="200" height="200" imgAlt="" classNames="button__icon button__icon--img" />
-          </span>
-          Buy on xRocket
-        </a>
+        <div class="cta">
+          <ul class="cta__list">
+            <li class="cta__item">
+              <a href="/" class="cta__link button button--primary">
+                History
+              </a>
+            </li>
+            <li class="cta__item">
+              <a href="/" class="cta__link button button--secondary">
+                Future
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="https://t.me/community_bot/club" class="link link--nav">Join us,🎱Fren!</a>
       </div>
     </div>
 </BaseLayout>

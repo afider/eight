@@ -1,77 +1,27 @@
 .button {
-  --button-color: var(--root-color-secondary);
-  --button-color-bg: var(--root-color-primary);
-  --button-color-bg-hover: var(--root-color-accent-deep);
-
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   border: none;
   border-radius: 500px;
-  padding: 20px 32px;
+  padding: 0 66px;
   text-decoration: none;
   color: var(--button-color);
-  background-color: var(--button-color-bg);
   position: relative;
-  transition-property: background-color;
-  transition-duration: var(--root-animation-duration);
   white-space: nowrap;
-  width: 100%;
-  max-width: 300px;
-  @include font(16px, 1);
+  height: 80px;
+  background: var(--button-color-bg);
+  @include font(32px, 38px, 600);
 
-  @include media-breakpoint-up(sm) {
-    width: auto;
-    max-width: none;
-    @include font(18px, 1);
+  &--primary {
+    --button-color: var(--root-color-primary-help);
+    --button-color-bg: radial-gradient(97% 100% at 100% 50%, rgb(249, 227, 176) 13.034044206142426%, rgb(255, 186, 171) 41.66760742664337%, rgb(180, 186, 236) 87.06110715866089%);
   }
 
-  @include media-breakpoint-up(md) {
-    width: auto;
-    max-width: none;
-    @include font(22px, 1);
+  &--secondary {
+    --button-color: var(--root-color-secondary);
+    --button-color-bg: var(--root-color-primary-help);
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 50px;
-    padding: 4px;
-    background:linear-gradient(
-      92deg,
-      #391f69,
-      #732b9b,
-      #e74bb8);
-    -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    transition-property: opacity;
-    transition-duration: var(--root-animation-duration);
-  }
-
-  &__icon {
-    width: 28px;
-    height: 28px;
-
-    &--img {
-      border-radius: 50%;
-    }
-  }
-
-  &__icon-img {
-    width: 28px;
-    height: 28px;
-  }
-
-  @include hover {
-    background-color: var(--button-color-bg-hover);
-
-    &::before {
-      opacity: 0;
-    }
-  }
 }
