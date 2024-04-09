@@ -3,33 +3,28 @@ import LangSwitcher from '@components/LangSwitcher.astro';
 import Logo from '@components/Logo.astro';
 import { Sprite } from 'astro-icon';
 
-
 ---
 <div class="layout__header header">
   <div class="header__actions">
-    <div class="header__icons">
-      <div class="socials">
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a href="https://t.me/anon_club" class="socials__link link link--nav" title="Telegram Channel">
-              <Sprite name="telegram" width="22" height="22" class="socials__icon" />
-            </a>
-          </li>
-          <li class="socials__item">
-            <a href="https://x.com/anonclub8" class="socials__link link link--nav" title="Read us on X (ex Twitter)">
-              <Sprite name="x" width="22" height="22" class="socials__icon" />
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div class="header__socials socials">
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a href="https://t.me/anon_club" class="socials__link link link--nav" title="Telegram Channel">
+            <Sprite name="telegram" width="22" height="22" class="socials__icon" />
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="https://x.com/anonclub8" class="socials__link link link--nav" title="Read us on X (ex Twitter)">
+            <Sprite name="x" width="22" height="22" class="socials__icon" />
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="header__lahg">
+    <div class="header__lang">
       <LangSwitcher />
     </div>
   </div>
   <div class="header__logo">
     <Logo />
   </div>
-  
-  
 </div>

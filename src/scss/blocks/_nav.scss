@@ -1,0 +1,20 @@
+.nav {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    @include media-breakpoint-up(sm) {
+      gap: 44px;
+    }
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+}

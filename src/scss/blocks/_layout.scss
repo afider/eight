@@ -5,8 +5,6 @@
   --layout-max-width: 1400px;
 
   background: linear-gradient(180deg, #242424 0%, #0C0C0C 38.5%, #000000 100%);
-
-
   color: var(--layout-color);
   font-family: var(--root-font-family-base);
 
@@ -19,11 +17,22 @@
     padding: var(--root-side-gap) 0;
   }
 
+  &__header {
+    position: relative;
+    z-index: 1;
+    @include media-breakpoint-up(md) {
+      margin-bottom: -30px;
+    }
+  }
 
   &__main,
   &__header,
   &__footer {
     padding-left: var(--root-side-gap);
     padding-right: var(--root-side-gap);
+  }
+
+  &__footer {
+    padding-top: 116px;
   }
 }

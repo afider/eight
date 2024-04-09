@@ -1,11 +1,15 @@
 .lang {
   --lang-color: var(--root-color-secondary);
+  --lang-color-border: var(--root-color-primary-soft);
   --lang-color-bg: var(--root-color-primary-accent);
   --lang-color-item-bg-hover: var(--root-color-hover-on-gradient);
 
   position: relative;
+  display: inline-flex;
   color: var(--lang-color);
   z-index: 1;
+  border: 1px solid var(--lang-color-border);
+  border-radius: 300px;
 
   &__selected {
     display: flex;
@@ -44,6 +48,13 @@
       right: -12px;
       margin-top: -12px;
     }
+  }
+
+  &--drop-top &__dropdown {
+    top: auto;
+    bottom: 0;
+    padding-bottom: 66px;
+    transform: translateY(20px);
   }
 
   &._active &__dropdown {

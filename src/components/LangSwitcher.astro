@@ -1,16 +1,18 @@
 ---
 import { getLang } from '@utils/GetLang.astro';
 const currentPageUrl = Astro.url.pathname;
+const {classNames} = Astro.props;
 
 import { Sprite } from 'astro-icon';
 ---
-<div class="lang" data-dropdown>
+<div class={`${classNames} lang`} data-dropdown>
   <Sprite.Provider />
   <div class="lang__selected" data-dropdown-ctrl>
-    {(getLang(currentPageUrl) === 'en') && (<Sprite name="flag-gb" width="20" height="20" class="lang__flag" /><span class="lang__name">ENG</span>)}
-    {(getLang(currentPageUrl) === 'ru') && (<Sprite name="flag-ru" width="20" height="20" class="lang__flag" /><span class="lang__name">РУС</span>)}
-    {(getLang(currentPageUrl) === 'ua') && (<Sprite name="flag-ua" width="20" height="20" class="lang__flag" /><span class="lang__name">УКР</span>)}
-    {(getLang(currentPageUrl) === 'cn') && (<Sprite name="flag-cn" width="20" height="20" class="lang__flag" /><span class="lang__name">中文</span>)}
+    <Sprite name="globe" width="16" height="16" class="lang__globe" />
+    {(getLang(currentPageUrl) === 'en') && (<span class="lang__name">ENG</span>)}
+    {(getLang(currentPageUrl) === 'ru') && (<span class="lang__name">РУС</span>)}
+    {(getLang(currentPageUrl) === 'ua') && (<span class="lang__name">УКР</span>)}
+    {(getLang(currentPageUrl) === 'cn') && (<span class="lang__name">中文</span>)}
     <Sprite name="arrow-down" width="14" height="14" class="lang__arrow" />
   </div>
   <div class="lang__dropdown">

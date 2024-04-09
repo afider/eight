@@ -1,7 +1,45 @@
 .cta {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    gap: 78px;
+  }
 
   &__list {
     display: grid;
-    gap: 20px;
+    margin-bottom: 74px;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include media-breakpoint-up(md) {
+      &:first-child {
+        margin-right: -66px;
+        z-index: 1;
+        position: relative;
+      }
+    }
+  }
+
+  &__link {
+    min-width: 245px;
+  }
+
+  &__club {
+    @include font(24px, 28px, 600);
+
+    @include media-breakpoint-up(sm) {
+      @include font(32px, 38px, 600);
+    }
   }
 }
