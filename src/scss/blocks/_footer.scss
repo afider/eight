@@ -1,11 +1,21 @@
 .footer {
-  
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 46px;
+  }
+
   &__body {
     display: flex;
     justify-content: space-between;
   }
 
   &__lang {
+    display: flex;
+    align-items: center;
+
     @include media-breakpoint-up(md) {
       display: none;
     }
@@ -14,7 +24,7 @@
   &__logo {
     display: flex;
     width: 100%;
-    
+
     @include media-breakpoint-up(md) {
       justify-content: center;
     }
@@ -22,9 +32,14 @@
 
   &__copy {
     text-align: center;
+    padding-top: 88px;
+    padding-bottom: 60px;
+    color: #414141;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       text-align: left;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 

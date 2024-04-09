@@ -1,7 +1,8 @@
 .lang {
-  --lang-color: var(--root-color-secondary);
+  --lang-color: var(--root-color-primary);
+  --lang-color-selected: var(--root-color-secondary);
   --lang-color-border: var(--root-color-primary-soft);
-  --lang-color-bg: var(--root-color-primary-accent);
+  --lang-color-bg: var(--root-color-secondary);
   --lang-color-item-bg-hover: var(--root-color-hover-on-gradient);
 
   position: relative;
@@ -21,6 +22,7 @@
     transition-property: background-;
     transition-duration: var(--root-animation-duration);
     position: relative;
+    color: var(--lang-color-selected);
     cursor: pointer;
     z-index: 1;
     user-select: none;
@@ -37,7 +39,7 @@
     top: 0;
     margin-top: -8px;
     padding-top: 66px;
-    width: 240px;
+    width: 180px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
@@ -66,9 +68,8 @@
   &__list {
     display: grid;
     padding: 20px 12px;
-    border: 2px solid #fdfdfd15;
     border-radius: 24px;
-    background: linear-gradient(17deg, rgba(1,0,13,1) 0%, rgba(39,5,65,1) 82%, rgba(40,3,57,1) 100%);
+    background: var(--lang-color-bg);
   }
 
   &__link {

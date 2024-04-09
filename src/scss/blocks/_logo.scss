@@ -25,6 +25,12 @@
     @include font(24px, 24px, 900);
   }
 
+  &--footer {
+    @include media-breakpoint-up(xl) {
+      color: #414141;
+    }
+  }
+
   &__domain {
     color: transparent;
     background-image: linear-gradient(
