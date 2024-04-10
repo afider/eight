@@ -1,0 +1,23 @@
+.logo {
+  --logo-color: var(--root-color-secondary);
+  --logo-color-hover: transparent;
+
+  color: var(--logo-color);
+  transition-property: color;
+  transition-duration: var(--root-animation-duration-slow);
+
+  @include hover {
+    color: var(--logo-color-hover);
+  }
+
+  &__pic {
+    width: 135px;
+    height: 45px;
+
+    @include media-breakpoint-up(xxl) {
+      width: 192px;
+      height: 65px;
+    }
+  }
+}
+

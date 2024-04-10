@@ -1,0 +1,49 @@
+---
+import Header from '@components/layout/Header.astro';
+import Footer from '@components/layout/Footer.astro';
+
+import { Sprite } from 'astro-icon';
+
+import { getLang } from '@utils/GetLang.astro';
+
+const currentPageUrl = Astro.url.pathname;
+
+import '@scss/main.scss';
+
+import favicon160 from '@images/favicons/favicon-160.png';
+import favicon32 from '@images/favicons/favicon-32.png';
+import favicon16 from '@images/favicons/favicon-16.png';
+import favicon from '@images/favicons/favicon.svg';
+
+const { title } = Astro.props;
+
+---
+{(getLang(currentPageUrl) === 'en') && (<Fragment set:html={`<html lang="en" class="layout">`} />)}
+{(getLang(currentPageUrl) === 'ru') && (<Fragment set:html={`<html lang="ru" class="layout">`} />)}
+{(getLang(currentPageUrl) === 'ua') && (<Fragment set:html={`<html lang="ua" class="layout">`} />)}
+{(getLang(currentPageUrl) === 'cn') && (<Fragment set:html={`<html lang="cn" class="layout">`} />)}
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/png" sizes="160x160" href={favicon160.src}>
+    <link rel="icon" type="image/png" sizes="32x32" href={favicon32.src}>
+    <link rel="icon" type="image/png" sizes="16x16" href={favicon16.src}>
+    <link rel="icon" type="image/svg+xml" sizes="any" href={favicon.src}>
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:image" content="/public/anon.png"/>
+  </head>
+  <body class="layout__body">
+    <Sprite.Provider />
+    <Header />
+    <main class="layout__main article">
+      <slot />
+    </main>
+    <Footer classNames="layout__footer" />
+    <script>
+      import '@js/main.js'
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+---
+import { getImage } from 'astro:assets';
+
+const {img, imgDark, imgAlt, classNames, imgFormat} = Astro.props;
+
+// img — изображение разрешением 2x, изображение 1x автоматически кропится из 2x
+// imgAlt — alt-текст для img-элемента
+// classNames — селекторы для атрибута class img-элемента
+// imgFormat — формат исходного изображения, например, 'png', если не указан, то автоматически используется jpg
+// Также, возможно указывать качество изображений от 0 до 100% https://docs.astro.build/ru/guides/images/#quality
+
+const format = imgFormat ? imgFormat : 'jpg';
+const fakeImgObj = {
+  src: '',
+  attributes: {}
+};
+
+const picDark = imgDark ? await getImage({ src: imgDark, format: format, width: imgDark.width / 2, height: imgDark.height / 2}) : fakeImgObj;
+const picX2Dark = imgDark ? await getImage({ src: imgDark, format: format }) : fakeImgObj;
+
+const picWebpDark = imgDark ? await getImage({ src: imgDark, format: 'webp', width: imgDark.width / 2, height: imgDark.height / 2}) : fakeImgObj;
+const picX2WebpDark = imgDark ? await getImage({ src: imgDark, format: 'webp' }) : fakeImgObj;
+
+const picAvifDark = imgDark ? await getImage({ src: imgDark, format: 'avif', width: imgDark.width / 2, height: imgDark.height / 2}) : fakeImgObj;
+const picX2AvifDark = imgDark ? await getImage({ src: imgDark, format: 'avif' }) : fakeImgObj;
+
+const pic = img ? await getImage({ src: img, format: format, width: img.width / 2, height: img.height / 2}) : fakeImgObj;
+const picX2 = img ? await getImage({ src: img, format: format}) : fakeImgObj;
+
+const picWebp = img ? await getImage({ src: img, format: 'webp', width: img.width / 2, height: img.height / 2}) : fakeImgObj;
+const picX2Webp = img ? await getImage({ src: img, format: 'webp'}) : fakeImgObj;
+
+const picAvif = img ? await getImage({ src: img, format: 'avif', width: img.width / 2, height: img.height / 2}) : fakeImgObj;
+const picX2Avif = img ? await getImage({ src: img, format: 'avif'}) : fakeImgObj;
+
+---
+{imgDark ? <Fragment set:html={`<source srcset="${picAvifDark.src}, ${picX2AvifDark.src} 2x" media="(prefers-color-scheme: dark)" type="image/webp" data-dark />`} /> : '' }
+{imgDark ? <Fragment set:html={`<source srcset="${picWebpDark.src}, ${picX2WebpDark.src} 2x" media="(prefers-color-scheme: dark)" type="image/webp" data-dark />`} /> : '' }
+{imgDark ? <Fragment set:html={`<source srcset="${picX2Dark.src} 2x" media="(prefers-color-scheme: dark)" data-dark />`} /> : '' }
+{imgDark ? <Fragment set:html={`<source srcset="${picDark.src}" media="(prefers-color-scheme: dark)" data-dark />`} /> : '' }
+
+{imgDark ? <Fragment set:html={`<source srcset="${picX2.src} 2x" media="(prefers-color-scheme: light)" data-light />`}  /> : '' }
+{imgDark ? <Fragment set:html={`<source srcset="${picX2.src} 2x" media="(prefers-color-scheme: light)" data-light />`} /> : '' }
+{imgDark ? <Fragment set:html={`<source srcset="${pic.src}" media="(prefers-color-scheme: light)" data-light />`} /> : '' }
+
+{imgDark ? 
+<Fragment set:html={`<source srcset="${picAvif.src}, ${picX2Avif.src} 2x" media="(prefers-color-scheme: light)" type="image/avif" data-light />`} /> : 
+<Fragment set:html={`<source srcset="${picAvif.src}, ${picX2Avif.src} 2x" type="image/avif" />`} /> }
+
+{imgDark ? 
+<Fragment set:html={`<source srcset="${picWebp.src}, ${picX2Webp.src} 2x" media="(prefers-color-scheme: light)" type="image/webp" data-light />`} /> : 
+<Fragment set:html={`<source srcset="${picWebp.src}, ${picX2Webp.src} 2x" type="image/webp" />`} /> }
+
+{img ? '' : <div class="warning">Не указан объект с изображением</div>}
+
+<img srcset={`${picX2.src} 2x`} src={pic.src} {...pic.attributes} alt={imgAlt} class={classNames} />

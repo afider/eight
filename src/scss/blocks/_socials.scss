@@ -1,0 +1,40 @@
+.socials {
+  color: #fff;
+
+  &__list {
+    display: flex;
+    gap: 4px;
+
+    @include media-breakpoint-up(lg) {
+      gap: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      gap: 56px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+
+    @include media-breakpoint-up(lg) {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}

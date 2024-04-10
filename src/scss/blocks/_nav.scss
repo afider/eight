@@ -1,0 +1,31 @@
+.nav {
+
+  @include font(20px, 24px, 600);
+
+  @include media-breakpoint-down(sm) {
+    @include font(16px, 24px, 600);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include font(24px, 28px, 600);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    @include media-breakpoint-up(sm) {
+      gap: 44px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+}
