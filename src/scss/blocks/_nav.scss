@@ -21,6 +21,7 @@
 
     @include media-breakpoint-up(xl) {
       justify-content: flex-start;
+      flex-wrap: wrap;
     }
   }
 

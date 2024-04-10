@@ -1,5 +1,6 @@
 ---
 import LangSwitcher from '@components/LangSwitcher.astro';
+import { getLang } from '@utils/GetLang.astro';
 import Logo from '@components/Logo.astro';
 
 const currentPageUrl = Astro.url.pathname;
@@ -14,7 +15,41 @@ const currentPageUrl = Astro.url.pathname;
     </div>
   </div>
   <div class="footer__copy">
-    Created by <a href="https://t.me/community_bot/club" class="link link--nav link--second">8Club Community</a>
+    {
+      (getLang(currentPageUrl) === 'en') && 
+      (
+      <div class="footer__copy">
+        Created by <a href="https://t.me/community_bot/club" class="link link--nav link--second">🎱Club Community</a>.
+      </div>
+      )
+    }
+  
+    {
+      (getLang(currentPageUrl) === 'ru') && 
+      (
+      <div class="footer__copy">
+        Создано <a href="https://t.me/community_bot/club" class="link link--nav link--second">🎱Club Community</a>.
+      </div>
+      )
+    }
+
+    {
+      (getLang(currentPageUrl) === 'ua') && 
+      (
+      <div class="footer__copy">
+        Створено <a href="https://t.me/community_bot/club" class="link link--nav link--second">🎱Club Community</a>.
+      </div>
+      )
+    }
+
+    {
+      (getLang(currentPageUrl) === 'cn') && 
+      (
+      <div class="footer__copy">
+        由 <a href="https://t.me/community_bot/club" class="link link--nav link--second">🎱俱乐部创建。</a>
+      </div>
+      )
+    }
   </div>
 </footer>
 

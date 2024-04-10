@@ -43,6 +43,10 @@
   &__body {
     padding-left: var(--root-side-gap);
     padding-right: var(--root-side-gap);
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 56%;
+    }
   }
 
   &__content {
