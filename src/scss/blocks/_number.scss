@@ -1,0 +1,36 @@
+.number {
+  width: 200px;
+  aspect-ratio: 372/106;
+  border-radius: 300px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--root-color-primary);
+  color: var(--root-color-secondary);
+  @include font(18px, 1, 800);
+
+  @include media-breakpoint-up(xsm) {
+    width: 372px;
+    @include font(32px, 1, 800);
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 532px;
+    @include font(50px, 1, 800);
+  }
+
+  &--primary {
+    background: radial-gradient(97% 100% at 100% 50%, rgb(249, 227, 176) 13.034044206142426%, rgb(255, 186, 171) 41.66760742664337%, rgb(180, 186, 236) 87.06110715866089%);
+    color: var(--root-color-primary);
+  }
+
+  &--secondary {
+    background: conic-gradient(from 185.17deg at 52% 49.25%, #000000 -28.12deg, #5A5A5A 26.25deg, #000000 88.12deg, #3A3A3A 146.25deg, #000000 204.37deg, #5E5E5E 268.13deg, #000000 331.88deg, #5A5A5A 386.25deg);
+    color: var(--root-color-secondary);
+  }
+
+  &--thirdly {
+    background: conic-gradient(from 184.23deg at 50.91% 48.84%, #B8C9D3 -28.12deg, #FBFBFD 26.25deg, #C8D4DA 88.12deg, #FFFFFF 156.58deg, #AEC0CE 191.74deg, #E3E9EE 237.13deg, #FAFBFC 255.19deg, #D6DFE6 310.11deg, #B8C9D3 331.88deg, #FBFBFD 386.25deg);
+    color: var(--root-color-primary);
+  }
+}

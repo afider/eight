@@ -1,5 +1,48 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 74px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      align-items: center;
+      gap: 40px;
+    }
+
+    @include media-breakpoint-up(md) {
+      order: 1;
+      justify-content: flex-end;
+    }
+
+    @include media-breakpoint-up(xl) {
+      gap: 100px;
+    }
+  }
+
+  &__socials {
+    
+  }
+
+  &__logo {
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+      order: 0;
+    }
+  }
 }
