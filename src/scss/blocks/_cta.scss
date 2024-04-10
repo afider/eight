@@ -1,5 +1,5 @@
 .cta {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +17,9 @@
     @include media-breakpoint-up(md) {
       display: flex;
       justify-content: center;
+    }
+
+    @include media-breakpoint-up(lg) {
       margin-bottom: 0;
     }
   }
@@ -41,5 +44,10 @@
     @include media-breakpoint-up(sm) {
       @include font(32px, 38px, 600);
     }
+  }
+
+  &__exmark {
+    display: inline-block;
+    transform: rotate(10deg);
   }
 }

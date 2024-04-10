@@ -35,11 +35,13 @@
     padding-top: 88px;
     padding-bottom: 60px;
     color: #414141;
+    @include font(20px, 25px, 500);
 
     @include media-breakpoint-up(xl) {
       text-align: left;
       padding-top: 0;
       padding-bottom: 0;
+      @include font(24px, 28px, 500);
     }
   }
 

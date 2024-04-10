@@ -23,8 +23,9 @@ $page-max-width: 1200px;
   --root-color-primary-accent: #100b11;
   --root-color-secondary: #fff;
   --root-color-accent: #e28df7;
-  --root-color-accent-deep: #732b9b;
-  --root-color-hover-on-gradient: rgba(22, 21, 21, 0.145);
+  --root-color-accent-help: #ecbabb;
+  --root-color-text-disabled: #414141;
+  --root-color-hover-bg: rgba(22 21 21 / 14.5%);
 
   // text-colors
   --root-color-text: var(--root-color-secondary);
@@ -32,7 +33,7 @@ $page-max-width: 1200px;
   // link-colors
   --root-color-link: var(--root-color-secondary);
   --root-color-link-border: rgba(255 255 255 / 60%);
-  --root-color-link-hover: var(--root-color-accent);
+  --root-color-link-hover: var(--root-color-accent-help);
   --root-color-link-active: var(--root-color-system-active);
   --root-color-link-active-border: rgba(255 0 0 / 87%);
   --root-color-link-visited: #e28df7;
@@ -53,11 +54,15 @@ $page-max-width: 1200px;
   // Dimentions
   --root-side-gap: 16px;
 
+  @include media-breakpoint-up(sm) {
+    --root-side-gap: 24px;
+  }
+
   @include media-breakpoint-up(md) {
-    --root-side-gap: 28px;
+    --root-side-gap: 32px;
   }
 
   @include media-breakpoint-up(xl) {
-    --root-side-gap: 40px;
+    --root-side-gap: 66px;
   }
 }

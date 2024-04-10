@@ -7,11 +7,16 @@
   align-items: center;
   background: var(--root-color-primary);
   color: var(--root-color-secondary);
-  @include font(18px, 1, 600);
+  @include font(18px, 1, 800);
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(xsm) {
     width: 372px;
-    @include font(32px, 1, 600);
+    @include font(32px, 1, 800);
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 532px;
+    @include font(50px, 1, 800);
   }
 
   &--primary {

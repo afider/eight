@@ -8,37 +8,37 @@ import { Sprite } from 'astro-icon';
 <div class={`${classNames} lang`} data-dropdown>
   <Sprite.Provider />
   <div class="lang__selected" data-dropdown-ctrl>
-    <Sprite name="globe" width="16" height="16" class="lang__globe" />
-    {(getLang(currentPageUrl) === 'en') && (<span class="lang__name">ENG</span>)}
-    {(getLang(currentPageUrl) === 'ru') && (<span class="lang__name">РУС</span>)}
-    {(getLang(currentPageUrl) === 'ua') && (<span class="lang__name">УКР</span>)}
+    <Sprite name="globe" class="lang__globe" />
+    {(getLang(currentPageUrl) === 'en') && (<span class="lang__name">eng</span>)}
+    {(getLang(currentPageUrl) === 'ru') && (<span class="lang__name">рус</span>)}
+    {(getLang(currentPageUrl) === 'ua') && (<span class="lang__name">укр</span>)}
     {(getLang(currentPageUrl) === 'cn') && (<span class="lang__name">中文</span>)}
-    <Sprite name="arrow-down" width="14" height="14" class="lang__arrow" />
+    <Sprite name="arrow-down" class="lang__arrow" />
   </div>
   <div class="lang__dropdown">
     <ul class="lang__list">
       <li class={`lang__item ${(getLang(currentPageUrl) === 'en') && '_active'}`}>
         <a href="/" class="lang__link">
           English
-          <Sprite name="checked" width="16" height="16" class="lang__checked" />
+          <Sprite name="checked" class="lang__checked" />
         </a>
       </li>
       <li class={`lang__item ${(getLang(currentPageUrl) === 'ru') && '_active'}`}>
         <a href="/ru/" class="lang__link">
           Русский
-          <Sprite name="checked" width="16" height="16" class="lang__checked" />
+          <Sprite name="checked" class="lang__checked" />
         </a>
       </li>
       <li class={`lang__item ${(getLang(currentPageUrl) === 'ua') && '_active'}`}>
         <a href="/ua/" class="lang__link">
           Українська
-          <Sprite name="checked" width="16" height="16" class="lang__checked" />
+          <Sprite name="checked" class="lang__checked" />
         </a>
       </li>
       <li class={`lang__item ${(getLang(currentPageUrl) === 'cn') && '_active'}`}>
         <a href="/cn/" class="lang__link">
           中文
-          <Sprite name="checked" width="16" height="16" class="lang__checked" />
+          <Sprite name="checked" class="lang__checked" />
         </a>
       </li>
     </ul>

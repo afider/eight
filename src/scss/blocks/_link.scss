@@ -46,4 +46,37 @@
       text-decoration-color: transparent;
     }
   }
+
+  &--second {
+    @include hover {
+      color: var(--root-color-text-disabled);
+      text-decoration-color: transparent;
+    }
+
+    &:focus-visible,
+    &:active {
+      color: var(--root-color-text-disabled);
+      text-decoration-color: transparent;
+    }
+
+    &:visited {
+      color: var(--root-color-text-disabled);
+      text-decoration-color: var(--root-color-text-disabled);
+
+      @include hover {
+        color: var(--root-color-text-disabled);
+        text-decoration-color: transparent;
+      }
+    }
+  }
+
+  &--second.link--nav:visited {
+    color: var(--root-color-text-disabled);
+    text-decoration-color: var(--root-color-text-disabled);
+
+    @include hover {
+      color: var(--root-color-text-disabled);
+      text-decoration-color: transparent;
+    }
+  }
 }

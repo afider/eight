@@ -1,5 +1,77 @@
 .numbers-list {
-  display: grid;
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+
+  &__body {
+    width: 1px;
+    min-height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @include media-breakpoint-up(xsm) {
+      min-height: 270px;
+    }
+  }
+
+  &__item {
+    position: absolute;
+
+    &:nth-child(1) {
+      transform: rotate(16deg);
+      top: 21px;
+      right: -159px;
+      z-index: 2;
+
+      @include media-breakpoint-up(xsm) {
+        top: 41px;
+        right: -330px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        transform: rotate(344deg);
+        top: auto;
+        bottom: -108px;
+        left: -55px;
+      }
+    }
+
+    &:nth-child(2) {
+      transform: rotate(355deg);
+      bottom: -3px;
+      left: -62px;
+      z-index: 3;
+
+      @include media-breakpoint-up(xsm) {
+        bottom: 5px;
+        left: -141px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        transform: rotate(8deg);
+        bottom: 109px;
+        left: 24px;
+      }
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-20deg);
+      top: 51px;
+      right: -55px;
+
+      @include media-breakpoint-up(xsm) {
+        top: 91px;
+        right: -74px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        transform: rotate(355deg);
+        top: -121px;
+        left: -118px;
+        z-index: 3;
+      }
+    }
+  }
 }

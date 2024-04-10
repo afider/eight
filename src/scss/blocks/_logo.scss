@@ -1,47 +1,23 @@
 .logo {
   --logo-color: var(--root-color-secondary);
-  --logo-color-hover: var(--root-color-primary);
+  --logo-color-hover: transparent;
 
-  text-transform: uppercase;
-  display: block;
-  text-decoration: none;
-  padding: 4px;
   color: var(--logo-color);
-  transition-property: text-decoration-color, color;
+  transition-property: color;
   transition-duration: var(--root-animation-duration-slow);
 
   @include hover {
     color: var(--logo-color-hover);
-    text-decoration-color: transparent;
   }
 
-  @include font(14px, 14px, 900);
+  &__pic {
+    width: 135px;
+    height: 45px;
 
-  @include media-breakpoint-up(sm) {
-    @include font(20px, 20px, 900);
-  }
-
-  @include media-breakpoint-up(md) {
-    @include font(24px, 24px, 900);
-  }
-
-  &--footer {
-    @include media-breakpoint-up(xl) {
-      color: #414141;
+    @include media-breakpoint-up(xxl) {
+      width: 192px;
+      height: 65px;
     }
-  }
-
-  &__domain {
-    color: transparent;
-    background-image: linear-gradient(
-      98deg,
-      #661f8c,
-      #f36ac9,
-      #0e0322
-    );
-    background-size: 200% 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
   }
 }
 
