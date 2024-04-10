@@ -1,3 +1,0 @@
-@mixin font($fz, $lh, $fw: null, $ff: $basic-font-family) {
-  font: $fw #{$fz} / #{$lh} $ff;
-}
