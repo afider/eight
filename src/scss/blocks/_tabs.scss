@@ -1,0 +1,112 @@
+.tabs {
+  --tabs-color: var(--root-color-secondary);
+  --tabs-color-active: var(--root-color-primary);
+  --tabs-color-hover: var(--root-color-link-hover);
+  --tabs-color-disabled: var(--root-color-text-disabled-second);
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(xsm) {
+      column-gap: 4px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      column-gap: 8px;
+    }
+    @include media-breakpoint-up(xl) {
+      column-gap: 20px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: var(--root-animation-duration);
+    transition-timing-function: ease;
+    @include font(20px, 1.4, 500);
+
+    &._disabled {
+      color: var(--tabs-color-disabled);
+      cursor: default;
+
+      @include hover {
+        color: var(--tabs-color-disabled);
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include font(26px, 1.4, 500);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(42px, 1.4, 500);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(52px, 1.4, 500);
+    }
+
+    @include hover {
+      color: var(--tabs-color-hover);
+    }
+  }
+
+  &__year {
+    padding: 8px 0;
+
+    &._sr-only {
+      @include sr-only;
+    }
+  }
+
+  &__q,
+  &__year {
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  &__q {
+    border-radius: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  &__title._active &__q {
+    background: radial-gradient(100% 97% at 100% 50%, #00CD6B 13.03%, #00D186 41.67%, #00CFCF 87.06%);
+    color: var(--tabs-color-active);
+  }
+
+  &__title._disabled &__q {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__content {
+    display: none;
+    order: 1;
+    width: 100%;
+    padding-top: 50px;
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 77px;
+    }
+
+    &._active {
+      display: block;
+    }
+  }
+}

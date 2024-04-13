@@ -47,7 +47,7 @@
     }
   }
 
-  &--second {
+  &.link--second {
     @include hover {
       color: var(--root-color-text-disabled);
       text-decoration-color: transparent;
@@ -70,7 +70,7 @@
     }
   }
 
-  &--second.link--nav:visited {
+  &.link--second.link--nav:visited {
     color: var(--root-color-text-disabled);
     text-decoration-color: var(--root-color-text-disabled);
 

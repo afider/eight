@@ -32,10 +32,14 @@
 
   &__copy {
     text-align: center;
-    padding-top: 88px;
+    padding-top: 40px;
     padding-bottom: 60px;
     color: #414141;
     @include font(20px, 25px, 500);
+
+    @include media-breakpoint-up(md) {
+      padding-top: 20px;
+    }
 
     @include media-breakpoint-up(xl) {
       text-align: left;
