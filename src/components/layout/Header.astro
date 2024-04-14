@@ -1,8 +1,10 @@
 ---
 import LangSwitcher from '@components/LangSwitcher.astro';
 import Logo from '@components/Logo.astro';
+import { getLang } from '@utils/GetLang.astro';
 import { Sprite } from 'astro-icon';
 
+const currentPageUrl = Astro.url.pathname;
 ---
 <div class="layout__header header">
   <div class="header__actions">
@@ -10,17 +12,26 @@ import { Sprite } from 'astro-icon';
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a href="#" class="main-nav__link link link--nav" data-main-nav-item="introduce">
-            Introduce
+            {(getLang(currentPageUrl) === 'en') && ('Introduce')}
+            {(getLang(currentPageUrl) === 'ru') && ('Встречайте')}
+            {(getLang(currentPageUrl) === 'ua') && ('Зустрічайте')}
+            {(getLang(currentPageUrl) === 'cn') && ('介紹')}
           </a>
         </li>
         <li class="main-nav__item">
           <a href="#roadmap" class="main-nav__link link link--nav" data-main-nav-item="roadmap">
-            Roadmap
+            {(getLang(currentPageUrl) === 'en') && ('Roadmap')}
+            {(getLang(currentPageUrl) === 'ru') && ('Дорожная карта')}
+            {(getLang(currentPageUrl) === 'ua') && ('Дорожня карта')}
+            {(getLang(currentPageUrl) === 'cn') && ('日曆計劃')}
           </a>
         </li>
         <li class="main-nav__item _dsiabled">
           <div class="main-nav__link">
-            Marketplace TBD
+            {(getLang(currentPageUrl) === 'en') && ('Marketplace TBD')}
+            {(getLang(currentPageUrl) === 'ru') && ('Рынок TBD')}
+            {(getLang(currentPageUrl) === 'ua') && ('Ринок TBD')}
+            {(getLang(currentPageUrl) === 'cn') && ('市場 TBD')}
           </div>
         </li>
       </ul>

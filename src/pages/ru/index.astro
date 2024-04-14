@@ -5,6 +5,7 @@ const pageTitle = "ANON";
 ---
 
 <BaseLayout title={pageTitle}>
+  <div id="introduce" data-nav-section>
     <div class="hero">
       <div class="hero__ball">
         <svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__ball-pic">
@@ -30,7 +31,7 @@ const pageTitle = "ANON";
               </a>
             </li>
             <li class="cta__item">
-              <a href="https://tonresear.ch/t/anon-privacy-for-everyone/8299" class="cta__link button button--secondary button--trans">
+              <a href="#roadmap" class="cta__link button button--secondary button--trans">
                 Будущее
               </a>
             </li>
@@ -77,10 +78,120 @@ const pageTitle = "ANON";
               <a href="https://fragment.com/numbers" class="nav__link link link--nav">Получить +888</a>
             </li>
             <li class="nav__item">
-              <a href="https://tonresear.ch/t/anon-privacy-for-everyone/8299" class="nav__link link link--nav">Будущее</a>
+              <a href="#roadmap" class="nav__link link link--nav">Будущее</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
+  </div>
+
+  <section id="roadmap" class="layout__section seciton" data-nav-section>
+    <h2 class="seciton__title">Дорожная карта</h2>
+
+    <div class="tabs">
+      <dl class="tabs__body">
+        <dt class="tabs__title _active" data-tab="2024-q2">
+          <span class="tabs__year">2024</span>
+          <span class="tabs__q">Q2</span>
+        </dt>
+        <dd id="2024-q2" class="tabs__content _active" data-tab-content>
+
+          <div class="check-list">
+            <ul class="check-list__list">
+              <li class="check-list__item _done">
+                Присейл с итоговым пределом в $500k
+              </li>
+              <li class="check-list__item _done">
+                Распределение ANON на DEX и инвесторам
+              </li>
+              <li class="check-list__item _done">
+                Листинг на DEXs и верификация токена в децентрализованных приложениях
+              </li>
+              <li class="check-list__item _done">
+                Период блокировки токенов на обеспечение ликвидности
+              </li>
+              <li class="check-list__item _done">
+                Сайт, социальные сети
+              </li>
+              <li class="check-list__item _done">
+                Листинг токена на Coingecko
+              </li>
+              <li class="check-list__item _in-progress _parent">
+                Сотрудничество с другими проектами на блокчейне TON
+                <ul class="check-list__list">
+                  <li class="check-list__item _done">
+                    Minor Open League Challenge
+                  </li>
+                  <li class="check-list__item _done">
+                    Партнерство $ANON и TON FISH
+                  </li>
+                  <li class="check-list__item _done">
+                    Партнерство $ANON и Catizen
+                  </li>
+                  <li class="check-list__item _in-progress">
+                    TBD
+                  </li>
+                </ul>
+              </li>
+              <li class="check-list__item _in-progress">
+                Листинг токена на Coinmarketcap
+              </li>
+              <li class="check-list__item _in-progress">
+                Запуск программ по сжиганию токена
+              </li>
+              <li class="check-list__item _in-progress">
+                Разработка ютилити, повышающего ценность владения ANON
+              </li>
+              <li class="check-list__item">
+                Листинг на CEX
+              </li>
+              <li class="check-list__item">
+                Кампании для вознаграждений
+              </li>
+              <li class="check-list__item">
+                Выпуск мини-игры в Telegram на блокчейне TON
+              </li>
+            </ul>
+          </div>
+
+        </dd>
+        <dt class="tabs__title" data-tab="2024-q3-4">
+          <span class="tabs__year _sr-only">2024</span>
+          <span class="tabs__q">Q3-4</span>
+        </dt>
+        <dd id="2024-q3-4" class="tabs__content" data-tab-content>
+          
+          <div class="check-list">
+            <ul class="check-list__list">
+              <li class="check-list__item">
+                Децентрализованный VPN-сервис на основе ANON и TON
+              </li>
+              <li class="check-list__item">
+                Торговая площадка для NFT
+              </li>
+              <li class="check-list__item">
+                Система конфиденциальных донатов и пожертвований для создателей контента
+              </li>
+              <li class="check-list__item">
+                Сотрудничество с крупными агрегаторами данных
+              </li>
+              <li class="check-list__item">
+                Сотрудничество с платежными системами и сервисами
+              </li>
+              <li class="check-list__item">
+                Хакатоны и конкурсы для разработчиков, создающих новые продукты для экосистемы
+              </li>
+            </ul>
+          </div>
+
+        </dd>
+        <dt class="tabs__title _disabled">
+          <span class="tabs__year">2025</span>
+          <span class="tabs__q">TBA</span>
+        </dt>
+      </dl>
+    </div>
+
+  </section>
 </BaseLayout>

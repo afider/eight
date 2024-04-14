@@ -27,7 +27,6 @@ export default function setNavActiveState() {
         });
         document.querySelector(`[data-main-nav-item=${change.target.id}]`).classList.add(activeState);
       } else if (change.isIntersecting && change.target.id === 'introduce') {
-        console.log('introduce');
         mainNavElements.forEach((item)=>{
           item.classList.remove(activeState);
         });

@@ -5,6 +5,7 @@ const pageTitle = "ANON";
 ---
 
 <BaseLayout title={pageTitle}>
+  <div id="introduce" data-nav-section>
     <div class="hero">
       <div class="hero__ball">
         <svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__ball-pic">
@@ -30,7 +31,7 @@ const pageTitle = "ANON";
               </a>
             </li>
             <li class="cta__item">
-              <a href="https://tonresear.ch/t/anon-privacy-for-everyone/8299" class="cta__link button button--secondary button--trans">
+              <a href="#roadmap" class="cta__link button button--secondary button--trans">
                 未來
               </a>
             </li>
@@ -77,10 +78,120 @@ const pageTitle = "ANON";
               <a href="https://fragment.com/numbers" class="nav__link link link--nav">得到 +888</a>
             </li>
             <li class="nav__item">
-              <a href="https://tonresear.ch/t/anon-privacy-for-everyone/8299" class="nav__link link link--nav">未來</a>
+              <a href="#roadmap" class="nav__link link link--nav">未來</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
+  </div>
+
+  <section id="roadmap" class="layout__section seciton" data-nav-section>
+    <h2 class="seciton__title">日曆計劃</h2>
+
+    <div class="tabs">
+      <dl class="tabs__body">
+        <dt class="tabs__title _active" data-tab="2024-q2">
+          <span class="tabs__year">2024</span>
+          <span class="tabs__q">Q2</span>
+        </dt>
+        <dd id="2024-q2" class="tabs__content _active" data-tab-content>
+
+          <div class="check-list">
+            <ul class="check-list__list">
+              <li class="check-list__item _done">
+                預售 $500 000 美元硬頂
+              </li>
+              <li class="check-list__item _done">
+                ANON將分發DEX對和投資者
+              </li>
+              <li class="check-list__item _done">
+                在 DEX 上列出並在去中心化應用程式中驗證令牌
+              </li>
+              <li class="check-list__item _done">
+                鎖定期LP代幣
+              </li>
+              <li class="check-list__item _done">
+                網站、社群網絡
+              </li>
+              <li class="check-list__item _done">
+                Coingecko 代幣上市
+              </li>
+              <li class="check-list__item _in-progress _parent">
+                與 TON 區塊鏈上其他項目的合作
+                <ul class="check-list__list">
+                  <li class="check-list__item _done">
+                    Minor Open League Challenge
+                  </li>
+                  <li class="check-list__item _done">
+                    $ANON 與 TON FISH 合作
+                  </li>
+                  <li class="check-list__item _done">
+                    Catizen 和 $ANON 合作夥伴關係
+                  </li>
+                  <li class="check-list__item _in-progress">
+                    TBD
+                  </li>
+                </ul>
+              </li>
+              <li class="check-list__item _in-progress">
+                Coinmarketcap 代幣上市
+              </li>
+              <li class="check-list__item _in-progress">
+                啟動代幣燃燒程序
+              </li>
+              <li class="check-list__item _in-progress">
+                開發可增加 ANON 所有權價值的公用事業
+              </li>
+              <li class="check-list__item">
+                CEX上市
+              </li>
+              <li class="check-list__item">
+                獎勵活動
+              </li>
+              <li class="check-list__item">
+                在 TON 區塊鏈上發布 Telegram 小遊戲
+              </li>
+            </ul>
+          </div>
+
+        </dd>
+        <dt class="tabs__title" data-tab="2024-q3-4">
+          <span class="tabs__year _sr-only">2024</span>
+          <span class="tabs__q">Q3-4</span>
+        </dt>
+        <dd id="2024-q3-4" class="tabs__content" data-tab-content>
+          
+          <div class="check-list">
+            <ul class="check-list__list">
+              <li class="check-list__item">
+                基於ANON和TON的去中心化VPN服務
+              </li>
+              <li class="check-list__item">
+                NFT 市場
+              </li>
+              <li class="check-list__item">
+                內容創作者的保密提示與捐款系統
+              </li>
+              <li class="check-list__item">
+                與大型數據聚合商合作
+              </li>
+              <li class="check-list__item">
+                與支付系統和服務的協作
+              </li>
+              <li class="check-list__item">
+                開發者的黑客馬拉松和競賽，為生態系統創造新產品
+              </li>
+            </ul>
+          </div>
+
+        </dd>
+        <dt class="tabs__title _disabled">
+          <span class="tabs__year">2025</span>
+          <span class="tabs__q">TBA</span>
+        </dt>
+      </dl>
+    </div>
+
+  </section>
 </BaseLayout>

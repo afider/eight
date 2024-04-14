@@ -13,6 +13,7 @@
   border-radius: 300px;
 
   &__selected {
+    white-space: nowrap;
     display: flex;
     align-items: center;
     gap: 8px;
