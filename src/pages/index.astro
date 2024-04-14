@@ -5,6 +5,7 @@ const pageTitle = "ANON";
 ---
 
 <BaseLayout title={pageTitle}>
+  <div id="introduce" data-nav-section>
     <div class="hero">
       <div class="hero__ball">
         <svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__ball-pic">
@@ -30,7 +31,7 @@ const pageTitle = "ANON";
               </a>
             </li>
             <li class="cta__item">
-              <a href="https://tonresear.ch/t/anon-privacy-for-everyone/8299" class="cta__link button button--secondary button--trans">
+              <a href="#roadmap" class="cta__link button button--secondary button--trans">
                 Future
               </a>
             </li>
@@ -77,119 +78,120 @@ const pageTitle = "ANON";
               <a href="https://fragment.com/numbers" class="nav__link link link--nav">Get +888</a>
             </li>
             <li class="nav__item">
-              <a href="https://tonresear.ch/t/anon-privacy-for-everyone/8299" class="nav__link link link--nav">Future</a>
+              <a href="#roadmap" class="nav__link link link--nav">Future</a>
             </li>
           </ul>
         </div>
       </div>
     </section>
+  </div>
 
-    <section class="layout__section seciton">
-      <h2 class="seciton__title">Roadmap</h2>
+  <section id="roadmap" class="layout__section seciton" data-nav-section>
+    <h2 class="seciton__title">Roadmap</h2>
 
-      <div class="tabs">
-        <dl class="tabs__body">
-          <dt class="tabs__title _active">
-            <span class="tabs__year">2024</span>
-            <span class="tabs__q">Q2</span>
-          </dt>
-          <dd class="tabs__content _active">
+    <div class="tabs">
+      <dl class="tabs__body">
+        <dt class="tabs__title _active" data-tab="2024-q2">
+          <span class="tabs__year">2024</span>
+          <span class="tabs__q">Q2</span>
+        </dt>
+        <dd id="2024-q2" class="tabs__content _active" data-tab-content>
 
-            <div class="check-list">
-              <ul class="check-list__list">
-                <li class="check-list__item _done">
-                  Presale $500k hard cap
-                </li>
-                <li class="check-list__item _done">
-                  ANON will be distributed DEX pair and investors
-                </li>
-                <li class="check-list__item _done">
-                  Listing on DEXs and verify token in dapps
-                </li>
-                <li class="check-list__item _done">
-                  LP tokens of lock period
-                </li>
-                <li class="check-list__item _done">
-                  Website, social networks
-                </li>
-                <li class="check-list__item _done">
-                  Coingecko token listing
-                </li>
-                <li class="check-list__item _in-progress">
-                  Coinmarketcap token listing
-                </li>
-                <li class="check-list__item _in-progress _parent">
-                  Collaborations with other projects on the TON blockchain
-                  <ul class="check-list__list">
-                    <li class="check-list__item _done">
-                      Minor Open League Challenge
-                    </li>
-                    <li class="check-list__item _done">
-                      $ANON x TON FISH Partnership
-                    </li>
-                    <li class="check-list__item _done">
-                      Catizen + $ANON Partnership
-                    </li>
-                    <li class="check-list__item _in-progress">
-                      TBD
-                    </li>
-                  </ul>
-                </li>
-                <li class="check-list__item _in-progress">
-                  Launching token burning programs
-                </li>
-                <li class="check-list__item _in-progress">
-                  Development of utilities that increase the value of ANON ownership
-                </li>
-                <li class="check-list__item">
-                  CEX listing
-                </li>
-                <li class="check-list__item">
-                  Reward campaigns
-                </li>
-                <li class="check-list__item">
-                  Release telegram mini-game on TON blockchain
-                </li>
-              </ul>
-            </div>
+          <div class="check-list">
+            <ul class="check-list__list">
+              <li class="check-list__item _done">
+                Presale $500k hard cap
+              </li>
+              <li class="check-list__item _done">
+                ANON will be distributed DEX pair and investors
+              </li>
+              <li class="check-list__item _done">
+                Listing on DEXs and verify token in dapps
+              </li>
+              <li class="check-list__item _done">
+                LP tokens of lock period
+              </li>
+              <li class="check-list__item _done">
+                Website, social networks
+              </li>
+              <li class="check-list__item _done">
+                Coingecko token listing
+              </li>
+              <li class="check-list__item _in-progress _parent">
+                Collaborations with other projects on the TON blockchain
+                <ul class="check-list__list">
+                  <li class="check-list__item _done">
+                    Minor Open League Challenge
+                  </li>
+                  <li class="check-list__item _done">
+                    $ANON x TON FISH Partnership
+                  </li>
+                  <li class="check-list__item _done">
+                    Catizen + $ANON Partnership
+                  </li>
+                  <li class="check-list__item _in-progress">
+                    TBD
+                  </li>
+                </ul>
+              </li>
+              <li class="check-list__item _in-progress">
+                Coinmarketcap token listing
+              </li>
+              <li class="check-list__item _in-progress">
+                Launching token burning programs
+              </li>
+              <li class="check-list__item _in-progress">
+                Development of utilities that increase the value of&nbsp;ANON ownership
+              </li>
+              <li class="check-list__item">
+                CEX listing
+              </li>
+              <li class="check-list__item">
+                Reward campaigns
+              </li>
+              <li class="check-list__item">
+                Release telegram mini-game on TON blockchain
+              </li>
+            </ul>
+          </div>
 
-          </dd>
-          <dt class="tabs__title">
-            <span class="tabs__year _sr-only">2024</span>
-            <span class="tabs__q">Q3-4</span>
-          </dt>
-          <dd class="tabs__content">
-            
-            <div class="check-list">
-              <ul class="check-list__list">
-                <li class="check-list__item">
-                  Decentralized VPN service based on ANON and TON
-                </li>
-                <li class="check-list__item">
-                  NFT marketplace
-                </li>
-                <li class="check-list__item">
-                  Confidential tip and donation system for content creators
-                </li>
-                <li class="check-list__item">
-                  Collaboration with large data aggregators
-                </li>
-                <li class="check-list__item">
-                  Collaboration with payment systems and services
-                </li>
-                <li class="check-list__item">
-                  Hackathons and contests for developers, creating new products for the ecosystem
-                </li>
-              </ul>
-            </div>
+        </dd>
+        <dt class="tabs__title" data-tab="2024-q3-4">
+          <span class="tabs__year _sr-only">2024</span>
+          <span class="tabs__q">Q3-4</span>
+        </dt>
+        <dd id="2024-q3-4" class="tabs__content" data-tab-content>
+          
+          <div class="check-list">
+            <ul class="check-list__list">
+              <li class="check-list__item">
+                Decentralized VPN service based on ANON and TON
+              </li>
+              <li class="check-list__item">
+                NFT marketplace
+              </li>
+              <li class="check-list__item">
+                Confidential tip and donation system for content creators
+              </li>
+              <li class="check-list__item">
+                Collaboration with large data aggregators
+              </li>
+              <li class="check-list__item">
+                Collaboration with payment systems and services
+              </li>
+              <li class="check-list__item">
+                Hackathons and contests for developers, creating new products for the ecosystem
+              </li>
+            </ul>
+          </div>
 
-          </dd>
-          <dt class="tabs__title _disabled">
-            <span class="tabs__year">2025</span>
-            <span class="tabs__q">TBA</span>
-          </dt>
-        </dl>
-      </div>
+        </dd>
+        <dt class="tabs__title _disabled">
+          <span class="tabs__year">2025</span>
+          <span class="tabs__q">TBA</span>
+        </dt>
+      </dl>
+    </div>
 
-    </section>
+  </section>
 </BaseLayout>

@@ -8,7 +8,8 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
+  xxxl: 1600px
 );
 $basic-font-family: 'Inter', sans-serif;
 $animation-speed: 300ms;
@@ -56,15 +57,23 @@ $page-max-width: 1200px;
   --root-side-gap: 16px;
 
   @include media-breakpoint-up(sm) {
-    --root-side-gap: 24px;
+    --root-side-gap: 40px;
   }
 
   @include media-breakpoint-up(md) {
-    --root-side-gap: 32px;
+    --root-side-gap: 80px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    --root-side-gap: 120px;
   }
 
   @include media-breakpoint-up(xl) {
-    --root-side-gap: 66px;
+    --root-side-gap: 120px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    --root-side-gap: 160px;
   }
 
   --root-section-vspace: 70px;

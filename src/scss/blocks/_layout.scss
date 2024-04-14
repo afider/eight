@@ -16,7 +16,11 @@
     max-width: var(--layout-max-width);
     margin-left: auto;
     margin-right: auto;
-    padding: var(--root-side-gap) 0;
+    padding: 40px 0;
+
+    @include media-breakpoint-up(xl) {
+      padding: 60px 0;
+    }
   }
 
   &__box {

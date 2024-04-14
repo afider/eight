@@ -25,6 +25,10 @@
     padding-left: calc(34px + 22px);
     padding-top: 6px;
     padding-bottom: 6px;
+    background: #B4BAEC;
+    background: linear-gradient(to right, #B4BAEC 3%, #FFBAAB 26%, #F9E3B0 56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     @include media-breakpoint-up(xl) {
       padding-left: calc(52px + 22px);
@@ -53,10 +57,28 @@
   }
 
   &__item._done {
+    background: #00CFCF;
+    background: linear-gradient(to right, #00CFCF 13%, #00D186 42%, #00CD6B 87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: line-through;
+    text-decoration-color: #00CD6B;
+    text-decoration-thickness: 1px;
+
+    @include media-breakpoint-up(xl) {
+      text-decoration-thickness: 2px;
+    }
 
     &::before {
       background-image: url('/src/assets/images/bullets/bullet-done.webp');
     }
+  }
+
+  &__item._in-progress._parent {
+    background: #00CFCF;
+    background: linear-gradient(to right, #00CFCF 13%, #00D186 42%, #00CD6B 87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &__item._in-progress {
@@ -68,6 +90,17 @@
 
   &__item &__item {
     padding-left: calc(22px + 18px);
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:  #fff;
+    text-decoration-color: #fff;
+
+    &._done {
+      background: radial-gradient(#00CD6B 13.03%, #00D186 41.67%, #00CFCF 87.06%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:  #fff;
+      text-decoration-color: #fff;
+    }
 
     @include media-breakpoint-up(xl) {
       padding-left: calc(32px + 16px);

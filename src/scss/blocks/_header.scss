@@ -1,5 +1,7 @@
 .header {
   display: grid;
+  position: relative;
+  z-index: 10;
   @include media-breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
   }
@@ -17,9 +19,6 @@
       margin-bottom: 0;
       align-items: center;
       gap: 40px;
-    }
-
-    @include media-breakpoint-up(md) {
       order: 1;
       justify-content: flex-end;
     }
@@ -29,8 +28,26 @@
     }
   }
 
-  &__socials {
-    
+  &__main-nav {
+    position: fixed;
+    bottom: 30px;
+    left: var(--root-side-gap);
+    z-index: 10;
+
+    @include media-breakpoint-up(lg) {
+      bottom: 0;
+      left: 40px;
+      transform-origin: left;
+      transform: rotate(-90deg);
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: 40px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: 60px;
+    }
   }
 
   &__logo {

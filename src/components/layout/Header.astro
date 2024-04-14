@@ -6,6 +6,25 @@ import { Sprite } from 'astro-icon';
 ---
 <div class="layout__header header">
   <div class="header__actions">
+    <div class="header__main-nav main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link link link--nav" data-main-nav-item="introduce">
+            Introduce
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#roadmap" class="main-nav__link link link--nav" data-main-nav-item="roadmap">
+            Roadmap
+          </a>
+        </li>
+        <li class="main-nav__item _dsiabled">
+          <div class="main-nav__link">
+            Marketplace TBD
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="header__socials socials">
       <ul class="socials__list">
         <li class="socials__item">

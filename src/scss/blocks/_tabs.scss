@@ -22,7 +22,7 @@
 
   &__title {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     cursor: pointer;
     transition-property: color;
     transition-duration: var(--root-animation-duration);
@@ -39,14 +39,17 @@
     }
 
     @include media-breakpoint-up(sm) {
+      gap: 8px;
       @include font(26px, 1.4, 500);
     }
 
     @include media-breakpoint-up(md) {
+      gap: 10px;
       @include font(42px, 1.4, 500);
     }
 
     @include media-breakpoint-up(xl) {
+      gap: 14px;
       @include font(52px, 1.4, 500);
     }
 
@@ -76,8 +79,8 @@
 
   &__q {
     border-radius: 20px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     @include media-breakpoint-up(sm) {
       padding-left: 16px;
@@ -88,6 +91,14 @@
   &__title._active &__q {
     background: radial-gradient(100% 97% at 100% 50%, #00CD6B 13.03%, #00D186 41.67%, #00CFCF 87.06%);
     color: var(--tabs-color-active);
+  }
+
+  &__title._disabled &__year {
+    padding-left: 8px;
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 16px;
+    }
   }
 
   &__title._disabled &__q {

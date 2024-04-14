@@ -1,14 +1,32 @@
 .seciton {
-  max-width: 800px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  scroll-margin-top: 40px;
+
+  @include media-breakpoint-up(md) {
+    scroll-margin-top: 50px;
+    max-width: 800px;
+  }
 
   @include media-breakpoint-up(lg) {
-    max-width: 1000px;
+    scroll-margin-top: 70px;
   }
 
   @include media-breakpoint-up(xl) {
-    max-width: 1440px;
+    scroll-margin-top: 100px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 700px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 900px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: 1000px;
   }
 
   &__title {
@@ -29,7 +47,7 @@
       @include font(90px, 1.06, 600);
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-bottom: 70px;
       @include font(100px, 1.06, 600);
     }
