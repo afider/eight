@@ -36,10 +36,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 40px;
-    @include font(38px, 1.06, 600);
+    @include font(50px, 1.06, 600);
 
     @include media-breakpoint-up(sm) {
-      @include font(54px, 1.06, 600);
+      @include font(70px, 1.06, 600);
     }
 
     @include media-breakpoint-up(md) {
