@@ -53,6 +53,14 @@
     }
   }
 
+  &__copy-link {
+    color: #414141;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-position: auto;
+    text-underline-offset: 0.14em;
+  }
+
   &__author {
     display: block;
     margin-bottom: 10px;
