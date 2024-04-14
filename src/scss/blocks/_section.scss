@@ -1,0 +1,60 @@
+.seciton {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  scroll-margin-top: 40px;
+
+  @include media-breakpoint-up(md) {
+    scroll-margin-top: 50px;
+    max-width: 800px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    scroll-margin-top: 70px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    scroll-margin-top: 100px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 700px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 900px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: 1000px;
+  }
+
+  &__title {
+    text-align: center;
+    background: #B4BAEC;
+    background: linear-gradient(to right, #B4BAEC 41%, #FFBAAB 56%, #F9E3B0 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+    @include font(50px, 1.06, 600);
+
+    @include media-breakpoint-up(sm) {
+      @include font(70px, 1.06, 600);
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 50px;
+      @include font(90px, 1.06, 600);
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 70px;
+      @include font(100px, 1.06, 600);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 100px;
+      @include font(124px, 1.06, 600);
+    }
+  }
+}

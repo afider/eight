@@ -1,13 +1,16 @@
 .box {
   --box-color-bg: var(--root-color-primary-help);
 
-
   @include media-breakpoint-up(xl) {
     background-color: var(--box-color-bg);
     border-radius: 24px;
-    padding: 100px 98px;
+    padding: 100px 70px;
     display: grid;
     grid-template-columns: 1fr max-content;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 100px 40px;
   }
 
   &__numbers {
@@ -41,11 +44,20 @@
   }
 
   &__body {
-    padding-left: var(--root-side-gap);
-    padding-right: var(--root-side-gap);
+    padding-left: 0;
+    padding-right: 30px;
 
     @include media-breakpoint-up(xl) {
+      padding-right: 60%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-left: 50px;
       padding-right: 56%;
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      padding-left: 70px;
     }
   }
 

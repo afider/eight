@@ -8,7 +8,8 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
+  xxxl: 1600px
 );
 $basic-font-family: 'Inter', sans-serif;
 $animation-speed: 300ms;
@@ -25,6 +26,7 @@ $page-max-width: 1200px;
   --root-color-accent: #e28df7;
   --root-color-accent-help: #ecbabb;
   --root-color-text-disabled: #414141;
+  --root-color-text-disabled-second: #606060;
   --root-color-hover-bg: rgba(22 21 21 / 14.5%);
 
   // text-colors
@@ -55,14 +57,36 @@ $page-max-width: 1200px;
   --root-side-gap: 16px;
 
   @include media-breakpoint-up(sm) {
-    --root-side-gap: 24px;
+    --root-side-gap: 40px;
   }
 
   @include media-breakpoint-up(md) {
-    --root-side-gap: 32px;
+    --root-side-gap: 80px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    --root-side-gap: 120px;
   }
 
   @include media-breakpoint-up(xl) {
-    --root-side-gap: 66px;
+    --root-side-gap: 120px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    --root-side-gap: 160px;
+  }
+
+  --root-section-vspace: 70px;
+
+  @include media-breakpoint-up(sm) {
+    --root-section-vspace: 90px;
+  }
+
+  @include media-breakpoint-up(md) {
+    --root-section-vspace: 130px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    --root-section-vspace: 180px;
   }
 }

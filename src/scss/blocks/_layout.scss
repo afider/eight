@@ -3,6 +3,7 @@
   --layout-color-bg: var(--root-color-main-bg);
   --layout-side-gap: var(--root-side-gap);
   --layout-max-width: 1920px;
+  --layout-section-vspace: var(--root-section-vspace);
 
   background: linear-gradient(180deg, #242424 0%, #0C0C0C 38.5%, #000000 100%);
   color: var(--layout-color);
@@ -15,7 +16,11 @@
     max-width: var(--layout-max-width);
     margin-left: auto;
     margin-right: auto;
-    padding: var(--root-side-gap) 0;
+    padding: 40px 0;
+
+    @include media-breakpoint-up(xl) {
+      padding: 60px 0;
+    }
   }
 
   &__box {
@@ -48,5 +53,10 @@
 
   &__footer {
     padding-top: 116px;
+  }
+
+  &__box,
+  &__section {
+    margin-bottom: var(--layout-section-vspace);
   }
 }

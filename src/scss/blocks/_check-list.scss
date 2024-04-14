@@ -1,0 +1,142 @@
+.check-list {
+  --check-list-color: var(--root-color-secondary);
+
+  @include font(20px, 24px, 600);
+
+  @include media-breakpoint-up(md) {
+    @include font(32px, 44px, 600);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include font(42px, 50px, 600);
+  }
+
+  &__list {
+    display: grid;
+    gap: 22px;
+
+    @include media-breakpoint-up(xl) {
+      gap: 42px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: calc(34px + 22px);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: #B4BAEC;
+    background: linear-gradient(to right, #B4BAEC 3%, #FFBAAB 26%, #F9E3B0 56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include media-breakpoint-up(xl) {
+      padding-left: calc(52px + 22px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 34px;
+      height: 34px;
+      background-image: url('/src/assets/images/bullets/bullet.webp');
+      background-size: cover;
+
+      @include media-breakpoint-up(md) {
+        top: 10px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: 4px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+
+  &__item._done {
+    background: #00CFCF;
+    background: linear-gradient(to right, #00CFCF 13%, #00D186 42%, #00CD6B 87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: line-through;
+    text-decoration-color: #00CD6B;
+    text-decoration-thickness: 1px;
+
+    @include media-breakpoint-up(xl) {
+      text-decoration-thickness: 2px;
+    }
+
+    &::before {
+      background-image: url('/src/assets/images/bullets/bullet-done.webp');
+    }
+  }
+
+  &__item._in-progress._parent {
+    background: #00CFCF;
+    background: linear-gradient(to right, #00CFCF 13%, #00D186 42%, #00CD6B 87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__item._in-progress {
+
+    &::before {
+      background-image: url('/src/assets/images/bullets/bullet-in-progress.webp');
+    }
+  }
+
+  &__item &__item {
+    padding-left: calc(22px + 18px);
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:  #fff;
+    text-decoration-color: #fff;
+
+    &._done {
+      background: radial-gradient(#00CD6B 13.03%, #00D186 41.67%, #00CFCF 87.06%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:  #fff;
+      text-decoration-color: #fff;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-left: calc(32px + 16px);
+    }
+
+    &::before {
+      top: 7px;
+      width: 22px;
+      height: 22px;
+
+      @include media-breakpoint-up(md) {
+        top: 16px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: 9px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__item &__list {
+    padding-top: 20px;
+    gap: 2px;
+
+    @include font(20px, 24px);
+
+    @include media-breakpoint-up(md) {
+      @include font(32px, 44px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-left: 26px;
+      gap: 16px;
+      @include font(32px, 38px, 600);
+    }
+  }
+}
