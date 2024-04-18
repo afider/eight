@@ -37,10 +37,12 @@
   }
 
   &__header {
+    display: flex;
+    align-items: center;
     position: relative;
     z-index: 1;
     @include media-breakpoint-up(md) {
-      margin-bottom: -30px;
+      margin-bottom: 66px;
     }
   }
 

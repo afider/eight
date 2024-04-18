@@ -28,10 +28,10 @@ const currentPageUrl = Astro.url.pathname;
         </li>
         <li class="main-nav__item _dsiabled">
           <div class="main-nav__link">
-            {(getLang(currentPageUrl) === 'en') && ('Marketplace TBD')}
-            {(getLang(currentPageUrl) === 'ru') && ('Рынок TBD')}
-            {(getLang(currentPageUrl) === 'ua') && ('Ринок TBD')}
-            {(getLang(currentPageUrl) === 'cn') && ('市場 TBD')}
+            {(getLang(currentPageUrl) === 'en') && (<>Marketplace <span class="main-nav__note">TBD</span></>)}
+            {(getLang(currentPageUrl) === 'ru') && (<>Маркетплейс <span class="main-nav__note">TBD</span></>)}
+            {(getLang(currentPageUrl) === 'ua') && (<>Маркетплейс <span class="main-nav__note">TBD</span></>)}
+            {(getLang(currentPageUrl) === 'cn') && (<>市場 TBD</>)}
           </div>
         </li>
       </ul>

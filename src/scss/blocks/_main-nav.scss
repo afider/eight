@@ -30,6 +30,15 @@
     @include media-breakpoint-up(lg) {
       flex-direction: row-reverse;
     }
+
+    @include media-breakpoint-up(xxl) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__note {
+    font-style: italic;
   }
 
   &__item &__link {
@@ -53,13 +62,29 @@
     }
 
     @include media-breakpoint-up(lg) {
-      padding: 10px 24px;
+      padding: 10px 12px;
+      border: none;
+      background: transparent;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-position: auto;
+      text-underline-offset: 0.14em;
       @include font(18px, 1.2, 600);
     }
 
     @include media-breakpoint-up(xxl) {
-      padding: 14px 24px;
-      @include font(24px, 1.2, 600);
+      padding: 6px 20px;
+      @include font(22px, 1.2, 600);
+    }
+
+    @include media-breakpoint-up(4xl) {
+      padding: 6px 20px;
+      @include font(30px, 1.2, 600);
+    }
+
+    @include media-breakpoint-up(6xl) {
+      padding: 6px 34px;
+      @include font(32px, 1.2, 600);
     }
   }
 
@@ -69,7 +94,10 @@
     text-decoration: none;
 
     @include media-breakpoint-up(lg) {
-      background: radial-gradient(97% 100% at 100% 50%, rgb(249, 227, 176) 13.034044206142426%, rgb(255, 186, 171) 41.66760742664337%, rgb(180, 186, 236) 87.06110715866089%);
+      background: #f9e3b0;
+      background: radial-gradient(circle farthest-corner at center center, #F9E3B0 13%, #FFBAAB 42%, #B4BAEC 87%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -77,6 +105,13 @@
     border: 1px solid #362b2b;
     background: #060606;
     color: #362b2a;
+
+    @include media-breakpoint-up(lg) {
+      border: none;
+      background: transparent;
+      color: #4c4c4c;
+      text-decoration: none;
+    }
   }
 }
 
