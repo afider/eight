@@ -9,7 +9,10 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
-  xxxl: 1600px
+  xxxl: 1600px,
+  4xl: 1700px,
+  5xl: 1780px,
+  6xl: 1850px,
 );
 $basic-font-family: 'Inter', sans-serif;
 $animation-speed: 300ms;
@@ -73,7 +76,7 @@ $page-max-width: 1200px;
   }
 
   @include media-breakpoint-up(xxl) {
-    --root-side-gap: 160px;
+    --root-side-gap: 60px;
   }
 
   --root-section-vspace: 70px;
