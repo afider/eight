@@ -7,10 +7,15 @@
     padding: 100px 70px;
     display: grid;
     grid-template-columns: 1fr max-content;
+    max-width: 1100px;
   }
 
   @include media-breakpoint-up(xxl) {
     padding: 100px 40px;
+  }
+
+  @include media-breakpoint-up(4xl) {
+    max-width: 1320px;
   }
 
   &__numbers {

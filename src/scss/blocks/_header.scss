@@ -3,7 +3,7 @@
   position: relative;
   z-index: 10;
   @include media-breakpoint-up(md) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: min-content 1fr;
   }
 
   &__actions {
@@ -23,8 +23,23 @@
       justify-content: flex-end;
     }
 
-    @include media-breakpoint-up(xl) {
-      gap: 100px;
+    @include media-breakpoint-up(xxl) {
+      display: grid;
+      grid-template-columns: 1fr max-content max-content;
+      gap: 30px;
+    }
+
+    @include media-breakpoint-up(6xl) {
+      gap: 0;
+    }
+  }
+
+  &__socials {
+    @include media-breakpoint-up(xxl) {
+      margin-right: 50px;
+    }
+    @include media-breakpoint-up(6xl) {
+      margin-right: 100px;
     }
   }
 
@@ -46,7 +61,10 @@
     }
 
     @include media-breakpoint-up(xxl) {
-      left: 60px;
+      //left: 60px;
+      position: relative;
+      left: auto;
+      transform: none;
     }
   }
 
@@ -60,6 +78,10 @@
 
     @include media-breakpoint-up(md) {
       order: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-right: 40px;
     }
   }
 }
