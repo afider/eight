@@ -6,6 +6,7 @@
 
   &__table {
     width: 100%;
+    margin-bottom: 35px;
   }
 
   &__item {
@@ -36,7 +37,7 @@
     }
   }
 
-  &__item[data-pass=''] {
+  &__item[data-retro-pass=''] {
 
     &::before,
     &::after {
@@ -52,6 +53,7 @@
 
     &:first-child {
       text-align: left;
+      width: 70%;
     }
 
     &:last-child {
@@ -62,6 +64,8 @@
   &__value {
     padding-top: 10px;
     padding-bottom: 10px;
+    vertical-align: center;
+    white-space: nowrap;
     @include font(14px, 1.2, 500);
 
     &:first-child {
@@ -72,5 +76,12 @@
     &:last-child {
       text-align: center;
     }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
   }
 }

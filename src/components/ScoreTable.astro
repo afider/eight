@@ -10,13 +10,162 @@ import { Sprite } from 'astro-icon';
       <th class="score__label">Anon numbers</th>
       <th class="score__label">Reward</th>
     </tr>
-    <tr class="score__item" data-box>
+    <tr class="score__item" data-retro-box>
       <td class="score__value">no</td>
-      <td class="score__value">Box</td>
+      <td class="score__value">
+        <Sprite name="box" class="score__icon" />
+        Box
+      </td>
     </tr>
-    <tr class="score__item" data-pass>
+    <tr class="score__item" data-retro-pass>
       <td class="score__value">yes</td>
-      <td class="score__value">Pass</td>
+      <td class="score__value">
+        <Sprite name="pass" class="score__icon" />
+        Pass
+      </td>
+    </tr>
+  </table>
+
+  <table class="score__table">
+    <tr class="score__item">
+      <th class="score__label">Anon holder</th>
+      <th class="score__label">Points</th>
+    </tr>
+    <tr class="score__item" data-retro-hold="0">
+      <td class="score__value">888+</td>
+      <td class="score__value">0</td>
+    </tr>
+    <tr class="score__item" data-retro-hold="1">
+      <td class="score__value">8 888+</td>
+      <td class="score__value">0</td>
+    </tr>
+    <tr class="score__item" data-retro-hold="2">
+      <td class="score__value">88 888+</td>
+      <td class="score__value">0</td>
+    </tr>
+    <tr class="score__item" data-retro-hold="3">
+      <td class="score__value">888 888+</td>
+      <td class="score__value">
+        <Sprite name="box" class="score__icon" />
+        2+Raffle
+      </td>
+    </tr>
+  </table>
+
+  <table class="score__table">
+    <tr class="score__item">
+      <th class="score__label">Donate (USDT)</th>
+      <th class="score__label">Points</th>
+    </tr>
+    <tr class="score__item" data-retro-donate="100">
+      <td class="score__value">100+</td>
+      <td class="score__value">1</td>
+    </tr>
+    <tr class="score__item" data-retro-donate="200">
+      <td class="score__value">200+</td>
+      <td class="score__value">2</td>
+    </tr>
+    <tr class="score__item" data-retro-donate="500">
+      <td class="score__value">500+</td>
+      <td class="score__value">3</td>
+    </tr>
+    <tr class="score__item" data-retro-donate="888">
+      <td class="score__value">888+</td>
+      <td class="score__value">4</td>
+    </tr>
+    <tr class="score__item" data-retro-donate="1500">
+      <td class="score__value">1500+</td>
+      <td class="score__value">5</td>
+    </tr>
+    <tr class="score__item" data-retro-donate="2500">
+      <td class="score__value">2500+</td>
+      <td class="score__value">6</td>
+    </tr>
+    <tr class="score__item" data-retro-donate="88888">
+      <td class="score__value">88 888+</td>
+      <td class="score__value">7</td>
+    </tr>
+    <tr class="score__item" data-retro-donate="100000">
+      <td class="score__value">100 000+</td>
+      <td class="score__value">8</td>
+    </tr>
+  </table>
+
+  <table class="score__table">
+    <tr class="score__item">
+      <th class="score__label">PASS</th>
+      <th class="score__label">Total</th>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="bronze">
+      <td class="score__value">Bronze</td>
+      <td class="score__value">1</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="silver">
+      <td class="score__value">Silver</td>
+      <td class="score__value">2</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="gold">
+      <td class="score__value">Gold</td>
+      <td class="score__value">3</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="platinum">
+      <td class="score__value">Platinum</td>
+      <td class="score__value">4</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="sapphire">
+      <td class="score__value">Sapphire</td>
+      <td class="score__value">5</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="emerald">
+      <td class="score__value">Emerald</td>
+      <td class="score__value">6</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="ruby">
+      <td class="score__value">Ruby</td>
+      <td class="score__value">7</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="diamond">
+      <td class="score__value">Diamond</td>
+      <td class="score__value">8</td>
+    </tr>
+  </table>
+
+  <table class="score__table">
+    <tr class="score__item">
+      <th class="score__label">BOX</th>
+      <th class="score__label">Total</th>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="bronze">
+      <td class="score__value">Bronze</td>
+      <td class="score__value">2</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="silver">
+      <td class="score__value">Silver</td>
+      <td class="score__value">3</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="gold">
+      <td class="score__value">Gold</td>
+      <td class="score__value">4</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="platinum">
+      <td class="score__value">Platinum</td>
+      <td class="score__value">5</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="sapphire">
+      <td class="score__value">Sapphire</td>
+      <td class="score__value">6</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="emerald">
+      <td class="score__value">Emerald</td>
+      <td class="score__value">7</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="ruby">
+      <td class="score__value">Ruby</td>
+      <td class="score__value">8</td>
+    </tr>
+    <tr class="score__item" data-retro-pass-league="diamond">
+      <td class="score__value">Diamond</td>
+      <td class="score__value">9</td>
     </tr>
   </table>
 
