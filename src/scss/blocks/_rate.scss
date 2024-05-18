@@ -1,0 +1,73 @@
+.rate {
+  display: flex;
+  gap: 2px;
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+
+    ._league-bronze & {
+      color: var(--root-color-league-bronze);
+
+      &:nth-child(n+2) {
+        opacity: 0.5;
+      }
+    }
+
+    ._league-silver & {
+      color: var(--root-color-league-silver);
+
+      &:nth-child(n+3) {
+        opacity: 0.5;
+      }
+    }
+
+    ._league-gold & {
+      color: var(--root-color-league-gold);
+
+      &:nth-child(n+4) {
+        opacity: 0.5;
+      }
+    }
+
+    ._league-platinum & {
+      color: var(--root-color-league-platinum);
+
+      &:nth-child(n+5) {
+        opacity: 0.5;
+      }
+    }
+
+    ._league-sapphire & {
+      color: var(--root-color-league-sapphire);
+
+      &:nth-child(n+6) {
+        opacity: 0.5;
+      }
+    }
+
+    ._league-emerald & {
+      color: var(--root-color-league-emerald);
+
+      &:nth-child(n+7) {
+        opacity: 0.5;
+      }
+    }
+
+    ._league-ruby & {
+      color: var(--root-color-league-ruby);
+
+      &:nth-child(n+8) {
+        opacity: 0.5;
+      }
+    }
+
+    ._league-diamond & {
+      color: var(--root-color-league-diamond);
+
+      &:nth-child(n+9) {
+        opacity: 0.5;
+      }
+    }
+  }
+}

@@ -15,6 +15,7 @@ $grid-breakpoints: (
   6xl: 1850px,
 );
 $basic-font-family: 'Inter', sans-serif;
+$second-font-family: 'Krona One', sans-serif;
 $animation-speed: 300ms;
 $animation-function: ease;
 $page-max-width: 1200px;
@@ -34,14 +35,14 @@ $page-max-width: 1200px;
   --root-color-hover-bg: rgba(22 21 21 / 14.5%);
 
   // Retro Status
-  --root-color-bronze: #f49a7a;
-  --root-color-silver: #b6b6b6;
-  --root-color-gold: #ffde37;
-  --root-color-platinum: #eee4d5;
-  --root-color-saphire: #74a7ff;
-  --root-color-emerald: #92f042;
-  --root-color-ruby: #ff7469;
-  --root-color-diamond: #1dead1;
+  --root-color-league-bronze: #f49a7a;
+  --root-color-league-silver: #b6b6b6;
+  --root-color-league-gold: #ffde37;
+  --root-color-league-platinum: #eee4d5;
+  --root-color-league-sapphire: #74a7ff;
+  --root-color-league-emerald: #92f042;
+  --root-color-league-ruby: #ff7469;
+  --root-color-league-diamond: #1dead1;
 
   // text-colors
   --root-color-text: var(--root-color-secondary);
@@ -61,6 +62,7 @@ $page-max-width: 1200px;
 
   // Font
   --root-font-family-base: 'Inter', sans-serif;
+  --root-font-family-second: 'Krona One', sans-serif;
 
   // Animations
   --root-animation-delay: 0.15s;
@@ -69,7 +71,7 @@ $page-max-width: 1200px;
   --root-animation-duration-fast: 0.2s;
 
   // Dimentions
-  --root-side-gap: 16px;
+  --root-side-gap: 24px;
 
   @include media-breakpoint-up(sm) {
     --root-side-gap: 40px;

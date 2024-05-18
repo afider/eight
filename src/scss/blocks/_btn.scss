@@ -34,15 +34,15 @@
   &--wide {
     width: 100%;
     max-width: 260px;
-  
+
     @include media-breakpoint-up(md) {
       max-width: 290px;
     }
-  
+
     @include media-breakpoint-up(lg) {
       max-width: 380px;
     }
-  
+
     @include media-breakpoint-up(xl) {
       max-width: 420px;
     }
