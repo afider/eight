@@ -3,6 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Story from '@components/Story.astro';
 import RetroHero from '@components/RetroHero.astro';
 import ScoreTable from '@components/ScoreTable.astro';
+import RetroStatus from '@components/RetroStatus.astro';
 import { Sprite } from 'astro-icon';
 
 const pageTitle = "ANON";
@@ -14,64 +15,39 @@ const pageTitle = "ANON";
     <Sprite name="logo" class="section__logo" />
     <h2 class="section__title section__title--intro">UPGRADE ANON <span class="section__title-sub">Tokenomics Retrodrop</span></h2>
 
-    <p class="section__intro text text--offset-bottom">There are&nbsp;exclusive rewards waiting for&nbsp;you when you&nbsp;join our&nbsp;programme.</p>
-    <p class="section__intro text text--offset-bottom text--express">
-      Check your status. Enter&nbsp;your&nbsp;wallet
-    </p>
+    <div class="retro-check _active" data-retro-check>
 
+      <p class="section__intro text text--offset-bottom">There are&nbsp;exclusive rewards waiting for&nbsp;you when you&nbsp;join our&nbsp;programme.</p>
+      <p class="section__intro text text--offset-bottom text--express">
+        Check your status. Enter&nbsp;your&nbsp;wallet
+      </p>
 
-    <div class="content">
-
-      <div class="status">
-
-        <div class="wallet">
-          <Sprite name="mark" class="wallet__icon" />
-          <div class="wallet__title">UQA-3*****uR1_F</div>
-          <div class="wallet__close">
-            <Sprite name="close" class="wallet__close-icon" />
-          </div>
+      <div class="form form--offset-bottom">
+        <div class="form__item">
+          <input id="wallet" type="text" class="form__input input input--wallet">
         </div>
-  
-        <div class="info-panel">
-          <div class="info-panel__label">Status</div>
-          <div class="info-panel__rate rate">
-            <Sprite name="star" class="rate__icon" />
-            <Sprite name="star" class="rate__icon" />
-            <Sprite name="star" class="rate__icon" />
-            <Sprite name="star" class="rate__icon" />
-            <Sprite name="star" class="rate__icon" />
-            <Sprite name="star" class="rate__icon" />
-            <Sprite name="star" class="rate__icon" />
-            <Sprite name="star" class="rate__icon" />
-          </div>
-          <div class="info-panel__level"></div>
-        </div>
-
-        <div class="info-panel">
-          <div class="info-panel__label">Snapshot balance</div>
-          <div class="info-panel__value">102888</div>
+        <div class="form__item">
+          <button id="wallet-button" class="btn btn--wide" disabled>
+            <div class="btn__loader"></div>
+            Check
+          </button>
         </div>
       </div>
 
-      <RetroHero />
-      <ScoreTable />
-
-      <Story />
     </div>
 
-    <div class="form form--offset-bottom">
-      <div class="form__item">
-        <input id="wallet" type="text" class="form__input input input--wallet">
+    <div class="retro-results" data-retro-results>
+
+      <div class="content">
+
+        <RetroStatus />
+        <RetroHero />
+        <ScoreTable />
+        <Story />
+
       </div>
-      <div class="form__item">
-        <button id="wallet-button" class="btn btn--wide" disabled>Check</button>
-      </div>
+
     </div>
-
-
-
-
-
 
   </div>
 

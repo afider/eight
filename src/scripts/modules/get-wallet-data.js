@@ -1,14 +1,23 @@
 export default function getWalletData() {
   const inputWallet = document.getElementById('wallet');
+
+  if(!inputWallet) return;
+
   const button = document.getElementById('wallet-button');
+  const closeButton = document.querySelector('[data-retro-wallet-close]');
   const loadingState = '_loading';
   const disabledState = '_disabled';
+  const activeState = '_active';
   const body = document.getElementsByTagName('body')[0];
+  const donatedNode = document.querySelector('[data-retro-donated]');
+  const walletNameNode = document.querySelector('[data-retro-wallet-name]');
+  const checkNode = document.querySelector('[data-retro-check]');
+  const resultsNode = document.querySelector('[data-retro-results]');
 
   button.addEventListener('click', () => {
 
-  const walletId = inputWallet.value.replace(/\s/g, '');
-  const url = `https://signal.wake.tg/wallet/${walletId}`;
+    const walletId = inputWallet.value.replace(/\s/g, '');
+    const url = `https://signal.wake.tg/wallet/${walletId}`;
 
     console.log('url', url);
     console.log('Clicked! ');
@@ -33,7 +42,8 @@ export default function getWalletData() {
       button.removeAttribute('disabled');
 
       setStatusClassnames(data);
-
+      checkNode.classList.remove(activeState);
+      resultsNode.classList.add(activeState);
       
     })
     .catch(error => {
@@ -51,6 +61,18 @@ export default function getWalletData() {
     });
   });
 
+  closeButton.addEventListener('click', () => {
+
+    console.log('close button clicked!');
+
+    inputWallet.value = '';
+    setTimeout(function(){
+      inputWallet.focus();
+    }, 600);
+    checkNode.classList.add(activeState);
+    resultsNode.classList.remove(activeState);
+    
+  });
 
   function setStatusClassnames(data) {
     body.classList.remove('_retro-level-bronze');
@@ -88,6 +110,9 @@ export default function getWalletData() {
     if (data.data.raffle) {
       body.classList.add('_retro-hold-raffle');
     }
+
+    donatedNode.textContent = data.data.reward.donated;
+    walletNameNode.textContent = data.data.wallet_short;
 
     console.log('_retro-level-', data.data.reward.level);
     console.log('_retro-', data.data.reward.type);

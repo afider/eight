@@ -1,5 +1,8 @@
 export default function validateInput() {
   const inputWallet = document.getElementById('wallet');
+
+  if(!inputWallet) return;
+
   const button = document.getElementById('wallet-button');
   const disabledState = '_disabled';
 
