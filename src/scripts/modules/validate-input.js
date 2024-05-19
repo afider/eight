@@ -9,6 +9,7 @@ export default function validateInput() {
   inputWallet.addEventListener('input', function() {
 
     const value = this.value.trim();
+    this.classList.remove('_error');
 
     // Проверяем, что введено минимум 5 символов (буквы, цифры или знаки препинания)
     if (value.length >= 5) {
@@ -19,7 +20,15 @@ export default function validateInput() {
       button.setAttribute('disabled', true);
     }
 
-  // Ваш код обработки события input здесь
-  console.log('Значение поля ввода:', this.value);
-});
+    // Ваш код обработки события input здесь
+    console.log('Значение поля ввода:', this.value);
+
+  });
+
+  inputWallet.addEventListener('keypress', function(event) {
+  
+      if (event.key === 'Enter') {
+        button.click();
+      }
+  });
 }

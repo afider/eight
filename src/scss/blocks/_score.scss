@@ -1,5 +1,9 @@
 .score {
 
+  ._retro-not-eligible & {
+    display: none;
+  }
+
   &--offset-bottom {
     margin-bottom: 158px;
   }

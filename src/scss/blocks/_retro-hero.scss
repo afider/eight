@@ -1,4 +1,21 @@
+@keyframes floatUpDown {
+
+  0% {
+    transform: translate(-50%, 0); /* Начальное состояние (парит на месте) */
+  }
+  50% {
+    transform: translate(-50%, -8px); /* Промежуточное состояние (парит вверх) */
+  }
+  100% {
+    transform: translate(-50%, 0); /* Конечное состояние (парит вниз) */
+  }
+}
+
 .retro-hero {
+
+  ._retro-not-eligible & {
+    display: none;
+  }
 
   &--offset-bottom {
     margin-bottom: 112px;
@@ -30,6 +47,7 @@
     transform: translateX(-50%);
     aspect-ratio: 1/1;
     background-size: cover;
+    animation: floatUpDown 4s ease infinite;
 
     ._retro-box & {
       top: 6%;

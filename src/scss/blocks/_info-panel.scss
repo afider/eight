@@ -19,6 +19,10 @@
     mask-composite: exclude;
   }
 
+  ._retro-not-eligible & {
+    display: none;
+  }
+
   &__label {
     color: #868686;
     margin-bottom: 8px;

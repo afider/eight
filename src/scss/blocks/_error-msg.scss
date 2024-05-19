@@ -1,0 +1,8 @@
+.error-msg {
+  padding: 8px;
+  display: none;
+
+  ._error + & {
+    display: block;
+  }
+}

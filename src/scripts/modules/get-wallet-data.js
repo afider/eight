@@ -8,6 +8,7 @@ export default function getWalletData() {
   const loadingState = '_loading';
   const disabledState = '_disabled';
   const activeState = '_active';
+  const errorState = '_error';
   const body = document.getElementsByTagName('body')[0];
   const donatedNode = document.querySelector('[data-retro-donated]');
   const walletNameNode = document.querySelector('[data-retro-wallet-name]');
@@ -17,7 +18,7 @@ export default function getWalletData() {
   button.addEventListener('click', () => {
 
     const walletId = inputWallet.value.replace(/\s/g, '');
-    const url = `https://signal.wake.tg/wallet/${walletId}`;
+    const url = `https://checker.anon.tg/wallet/${walletId}`;
 
     console.log('url', url);
     console.log('Clicked! ');
@@ -51,6 +52,7 @@ export default function getWalletData() {
       button.classList.remove(disabledState);
       button.classList.remove(loadingState);
       button.removeAttribute('disabled');
+      inputWallet.classList.add(errorState);
 
       if (error.message.includes('404')) {
         console.error('Данные не найдены');
@@ -102,22 +104,32 @@ export default function getWalletData() {
     body.classList.remove('_retro-donate-7');
     body.classList.remove('_retro-donate-8');
 
-    body.classList.add(`_retro-level-${data.data.reward.level}`);
-    body.classList.add(`_retro-${data.data.reward.type}`);
-    body.classList.add(`_retro-hold-${data.data.reward.points.hold}`);
-    body.classList.add(`_retro-donate-${data.data.reward.points.donate}`);
+    body.classList.remove('_retro-not-eligible');
 
-    if (data.data.raffle) {
-      body.classList.add('_retro-hold-raffle');
+    if (data.data.eligible) {
+      body.classList.add(`_retro-level-${data.data.reward.level}`);
+      body.classList.add(`_retro-${data.data.reward.type}`);
+      body.classList.add(`_retro-hold-${data.data.reward.points.hold}`);
+      body.classList.add(`_retro-donate-${data.data.reward.points.donate}`);
+  
+      if (data.data.raffle) {
+        body.classList.add('_retro-hold-raffle');
+      }
+  
+      donatedNode.textContent = data.data.reward.donated;
+      walletNameNode.textContent = data.data.wallet_short;
+
+      console.log('_retro-level-', data.data.reward.level);
+      console.log('_retro-', data.data.reward.type);
+      console.log('_retro-hold-raffle', data.data.raffle);
+      console.log('_retro-hold-', data.data.reward.points.hold);
+      console.log('_retro-donate-', data.data.reward.points.donate);
+    } else {
+
+      body.classList.add('_retro-not-eligible');
+      walletNameNode.textContent = data.data.wallet_short;
+      console.log('not eligible !!!');
     }
 
-    donatedNode.textContent = data.data.reward.donated;
-    walletNameNode.textContent = data.data.wallet_short;
-
-    console.log('_retro-level-', data.data.reward.level);
-    console.log('_retro-', data.data.reward.type);
-    console.log('_retro-hold-raffle', data.data.raffle);
-    console.log('_retro-hold-', data.data.reward.points.hold);
-    console.log('_retro-donate-', data.data.reward.points.donate);
   }
 }

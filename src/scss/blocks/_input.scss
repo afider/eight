@@ -20,6 +20,12 @@
     @include font(28px, 1, 500);
   }
 
+  &:focus {
+    box-shadow: 0 0 5px 5px rgba(3, 135, 130, 0.5);
+    transition-property: box-shadow;
+    transition-duration: var(--root-animation-duration);
+  }
+
   &--wallet {
     width: 100%;
     max-width: 490px;
