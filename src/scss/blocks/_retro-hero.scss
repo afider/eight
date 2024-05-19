@@ -1,0 +1,147 @@
+.retro-hero {
+
+  &--offset-bottom {
+    margin-bottom: 66px;
+  }
+
+  &__back {
+    aspect-ratio: 419/252;
+    background-image: image-set(
+      url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif'),
+      url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp')
+    );
+    background-size: cover;
+  }
+
+  &__front {
+    width: 410px;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 1/1;
+    background-image: image-set(
+      url('/src/assets/images/retro/pass/pass-bronze.avif') type('image/avif'),
+      url('/src/assets/images/retro/pass/pass-bronze.webp') type('image/webp')
+    );
+    background-size: cover;
+  }
+
+  &__pic {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    max-width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    @include font(22px, 1.2, 700);
+  }
+
+  &__league {
+    text-align: center;
+    text-transform: uppercase;
+    @include font(22px, 1, 400, $second-font-family);
+
+    ._retro-league-bronze & {
+      color: var(--root-color-league-bronze);
+
+      &::before {
+        content: 'Bronze';
+      }
+    }
+
+    ._retro-league-silver & {
+      color: var(--root-color-league-silver);
+
+      &::before {
+        content: 'Silver';
+      }
+    }
+
+    ._retro-league-gold & {
+      color: var(--root-color-league-gold);
+
+      &::before {
+        content: 'Gold';
+      }
+    }
+
+    ._retro-league-platinum & {
+      color: var(--root-color-league-platinum);
+
+      &::before {
+        content: 'Platinum';
+      }
+    }
+
+    ._retro-league-sapphire & {
+      color: var(--root-color-league-sapphire);
+
+      &::before {
+        content: 'Sapphire';
+      }
+    }
+
+    ._retro-league-emerald & {
+      color: var(--root-color-league-emerald);
+
+      &::before {
+        content: 'Emerald';
+      }
+    }
+
+    ._retro-league-ruby & {
+      color: var(--root-color-league-ruby);
+
+      &::before {
+        content: 'Ruby';
+      }
+    }
+
+    ._retro-league-diamond & {
+      color: var(--root-color-league-diamond);
+
+      &::before {
+        content: 'Diamond';
+      }
+    }
+
+
+    ._retro-pass & {
+
+      &::after {
+        content: ' pass';
+      }
+    }
+
+    ._retro-box & {
+
+      &::after {
+        content: ' box';
+      }
+    }
+  }
+
+  &__raffle {
+    max-width: 388px;
+    padding-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-align: center;
+    background: #B4BAEC;
+    background: linear-gradient(to right, #B4BAEC 41%, #FFBAAB 56%, #F9E3B0 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none;
+    @include font(16px, 1.2, 700);
+
+    ._retro-hold-raffle & {
+      display: block;
+    }
+  }
+}

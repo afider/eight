@@ -7,18 +7,20 @@
   &__table {
     width: 100%;
     margin-bottom: 35px;
+
+    &[data-retro-score-pass],
+    &[data-retro-score-box] {
+      display: none;
+    }
+
+    ._retro-pass &[data-retro-score-pass],
+    ._retro-box &[data-retro-score-box] {
+      display: table;
+    }
   }
 
   &__item {
     position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 20px;
-      opacity: 0;
-    }
 
     &::before {
       content: '';
@@ -37,7 +39,34 @@
     }
   }
 
-  &__item[data-retro-pass=''] {
+  ._retro-pass &__item[data-retro-pass],
+  ._retro-hold-raffle &__item[data-retro-raffle],
+  ._retro-hold-0 &__item[data-retro-hold-0],
+  ._retro-hold-1 &__item[data-retro-hold-1],
+  ._retro-hold-2 &__item[data-retro-hold-2],
+  ._retro-donate-1 &__item[data-retro-donate-1],
+  ._retro-donate-2 &__item[data-retro-donate-2],
+  ._retro-donate-3 &__item[data-retro-donate-3],
+  ._retro-donate-4 &__item[data-retro-donate-4],
+  ._retro-donate-5 &__item[data-retro-donate-5],
+  ._retro-donate-6 &__item[data-retro-donate-6],
+  ._retro-donate-7 &__item[data-retro-donate-7],
+  ._retro-donate-8 &__item[data-retro-donate-8],
+  ._retro-league-bronze &__item[data-retro-score-league='bronze'],
+  ._retro-league-silver &__item[data-retro-score-league='silver'],
+  ._retro-league-gold &__item[data-retro-score-league='gold'],
+  ._retro-league-platinum &__item[data-retro-score-league='platinum'],
+  ._retro-league-sapphire &__item[data-retro-score-league='sapphire'],
+  ._retro-league-emerald &__item[data-retro-score-league='emerald'],
+  ._retro-league-ruby &__item[data-retro-score-league='ruby'],
+  ._retro-league-diamond &__item[data-retro-score-league='diamond'] {
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  ._retro-box &__item[data-retro-box] {
 
     &::before,
     &::after {

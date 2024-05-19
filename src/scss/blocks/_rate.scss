@@ -6,7 +6,7 @@
     width: 12px;
     height: 12px;
 
-    ._league-bronze & {
+    ._retro-league-bronze & {
       color: var(--root-color-league-bronze);
 
       &:nth-child(n+2) {
@@ -14,7 +14,7 @@
       }
     }
 
-    ._league-silver & {
+    ._retro-league-silver & {
       color: var(--root-color-league-silver);
 
       &:nth-child(n+3) {
@@ -22,7 +22,7 @@
       }
     }
 
-    ._league-gold & {
+    ._retro-league-gold & {
       color: var(--root-color-league-gold);
 
       &:nth-child(n+4) {
@@ -30,7 +30,7 @@
       }
     }
 
-    ._league-platinum & {
+    ._retro-league-platinum & {
       color: var(--root-color-league-platinum);
 
       &:nth-child(n+5) {
@@ -38,7 +38,7 @@
       }
     }
 
-    ._league-sapphire & {
+    ._retro-league-sapphire & {
       color: var(--root-color-league-sapphire);
 
       &:nth-child(n+6) {
@@ -46,7 +46,7 @@
       }
     }
 
-    ._league-emerald & {
+    ._retro-league-emerald & {
       color: var(--root-color-league-emerald);
 
       &:nth-child(n+7) {
@@ -54,7 +54,7 @@
       }
     }
 
-    ._league-ruby & {
+    ._retro-league-ruby & {
       color: var(--root-color-league-ruby);
 
       &:nth-child(n+8) {
@@ -62,7 +62,7 @@
       }
     }
 
-    ._league-diamond & {
+    ._retro-league-diamond & {
       color: var(--root-color-league-diamond);
 
       &:nth-child(n+9) {

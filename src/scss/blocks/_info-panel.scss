@@ -46,7 +46,7 @@
   &__league {
     text-transform: uppercase;
 
-    ._league-bronze & {
+    ._retro-league-bronze & {
       color: var(--root-color-league-bronze);
 
       &::before {
@@ -54,7 +54,7 @@
       }
     }
 
-    ._league-silver & {
+    ._retro-league-silver & {
       color: var(--root-color-league-silver);
 
       &::before {
@@ -62,7 +62,7 @@
       }
     }
 
-    ._league-gold & {
+    ._retro-league-gold & {
       color: var(--root-color-league-gold);
 
       &::before {
@@ -70,7 +70,7 @@
       }
     }
 
-    ._league-platinum & {
+    ._retro-league-platinum & {
       color: var(--root-color-league-platinum);
 
       &::before {
@@ -78,7 +78,7 @@
       }
     }
 
-    ._league-sapphire & {
+    ._retro-league-sapphire & {
       color: var(--root-color-league-sapphire);
 
       &::before {
@@ -86,7 +86,7 @@
       }
     }
 
-    ._league-emerald & {
+    ._retro-league-emerald & {
       color: var(--root-color-league-emerald);
 
       &::before {
@@ -94,7 +94,7 @@
       }
     }
 
-    ._league-ruby & {
+    ._retro-league-ruby & {
       color: var(--root-color-league-ruby);
 
       &::before {
@@ -102,7 +102,7 @@
       }
     }
 
-    ._league-diamond & {
+    ._retro-league-diamond & {
       color: var(--root-color-league-diamond);
 
       &::before {
