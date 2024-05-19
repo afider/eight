@@ -43,67 +43,67 @@
     }
   }
 
-  &__league {
+  &__level {
     text-transform: uppercase;
 
-    ._retro-league-bronze & {
-      color: var(--root-color-league-bronze);
+    ._retro-level-bronze & {
+      color: var(--root-color-level-bronze);
 
       &::before {
         content: 'Bronze';
       }
     }
 
-    ._retro-league-silver & {
-      color: var(--root-color-league-silver);
+    ._retro-level-silver & {
+      color: var(--root-color-level-silver);
 
       &::before {
         content: 'Silver';
       }
     }
 
-    ._retro-league-gold & {
-      color: var(--root-color-league-gold);
+    ._retro-level-gold & {
+      color: var(--root-color-level-gold);
 
       &::before {
         content: 'Gold';
       }
     }
 
-    ._retro-league-platinum & {
-      color: var(--root-color-league-platinum);
+    ._retro-level-platinum & {
+      color: var(--root-color-level-platinum);
 
       &::before {
         content: 'Platinum';
       }
     }
 
-    ._retro-league-sapphire & {
-      color: var(--root-color-league-sapphire);
+    ._retro-level-sapphire & {
+      color: var(--root-color-level-sapphire);
 
       &::before {
         content: 'Sapphire';
       }
     }
 
-    ._retro-league-emerald & {
-      color: var(--root-color-league-emerald);
+    ._retro-level-emerald & {
+      color: var(--root-color-level-emerald);
 
       &::before {
         content: 'Emerald';
       }
     }
 
-    ._retro-league-ruby & {
-      color: var(--root-color-league-ruby);
+    ._retro-level-ruby & {
+      color: var(--root-color-level-ruby);
 
       &::before {
         content: 'Ruby';
       }
     }
 
-    ._retro-league-diamond & {
-      color: var(--root-color-league-diamond);
+    ._retro-level-diamond & {
+      color: var(--root-color-level-diamond);
 
       &::before {
         content: 'Diamond';
@@ -111,7 +111,7 @@
     }
   }
 
-  &__league,
+  &__level,
   &__value {
     @include font(14px, 1, 400, $second-font-family);
 

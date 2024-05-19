@@ -43,7 +43,7 @@
   ._retro-hold-raffle &__item[data-retro-raffle],
   ._retro-hold-0 &__item[data-retro-hold-0],
   ._retro-hold-1 &__item[data-retro-hold-1],
-  ._retro-hold-2 &__item[data-retro-hold-2],
+  ._retro-hold-2:not(._retro-hold-raffle) &__item[data-retro-hold-2],
   ._retro-donate-1 &__item[data-retro-donate-1],
   ._retro-donate-2 &__item[data-retro-donate-2],
   ._retro-donate-3 &__item[data-retro-donate-3],
@@ -52,14 +52,14 @@
   ._retro-donate-6 &__item[data-retro-donate-6],
   ._retro-donate-7 &__item[data-retro-donate-7],
   ._retro-donate-8 &__item[data-retro-donate-8],
-  ._retro-league-bronze &__item[data-retro-score-league='bronze'],
-  ._retro-league-silver &__item[data-retro-score-league='silver'],
-  ._retro-league-gold &__item[data-retro-score-league='gold'],
-  ._retro-league-platinum &__item[data-retro-score-league='platinum'],
-  ._retro-league-sapphire &__item[data-retro-score-league='sapphire'],
-  ._retro-league-emerald &__item[data-retro-score-league='emerald'],
-  ._retro-league-ruby &__item[data-retro-score-league='ruby'],
-  ._retro-league-diamond &__item[data-retro-score-league='diamond'] {
+  ._retro-level-bronze &__item[data-retro-score-level='bronze'],
+  ._retro-level-silver &__item[data-retro-score-level='silver'],
+  ._retro-level-gold &__item[data-retro-score-level='gold'],
+  ._retro-level-platinum &__item[data-retro-score-level='platinum'],
+  ._retro-level-sapphire &__item[data-retro-score-level='sapphire'],
+  ._retro-level-emerald &__item[data-retro-score-level='emerald'],
+  ._retro-level-ruby &__item[data-retro-score-level='ruby'],
+  ._retro-level-diamond &__item[data-retro-score-level='diamond'] {
 
     &::before {
       opacity: 1;

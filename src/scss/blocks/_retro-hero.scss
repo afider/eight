@@ -5,26 +5,157 @@
   }
 
   &__back {
-    aspect-ratio: 419/252;
-    background-image: image-set(
-      url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif'),
-      url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp')
-    );
     background-size: cover;
+
+    ._retro-pass & {
+      aspect-ratio: 419/252;
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box & {
+      aspect-ratio: 616/354;
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-bronze-back.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-bronze-back.webp') type('image/webp')
+      );
+    }
   }
 
   &__front {
-    width: 410px;
     position: absolute;
-    top: 16%;
     left: 50%;
     transform: translateX(-50%);
     aspect-ratio: 1/1;
-    background-image: image-set(
-      url('/src/assets/images/retro/pass/pass-bronze.avif') type('image/avif'),
-      url('/src/assets/images/retro/pass/pass-bronze.webp') type('image/webp')
-    );
     background-size: cover;
+
+    ._retro-box & {
+      top: 6%;
+      width: 72%;
+    }
+
+    ._retro-pass & {
+      top: 16%;
+      width: 56%;
+    }
+
+    // Passes
+
+    ._retro-pass._retro-level-bronze & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-bronze.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-bronze.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-silver & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-silver.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-silver.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-gold & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-gold.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-gold.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-platinum & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-platinum.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-platinum.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-sapphire & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-sapphire.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-sapphire.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-emerald & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-emerald.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-emerald.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-ruby & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-ruby.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-ruby.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-diamond & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-diamond.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-diamond.webp') type('image/webp')
+      );
+    }
+
+    // Boxes
+
+    ._retro-box._retro-level-bronze & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-silver & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-silver.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-gold & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-gold.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-platinum & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-sapphire & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-emerald & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-ruby & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-diamond & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp')
+      );
+    }
   }
 
   &__pic {
@@ -41,69 +172,69 @@
     @include font(22px, 1.2, 700);
   }
 
-  &__league {
+  &__level {
     text-align: center;
     text-transform: uppercase;
     @include font(22px, 1, 400, $second-font-family);
 
-    ._retro-league-bronze & {
-      color: var(--root-color-league-bronze);
+    ._retro-level-bronze & {
+      color: var(--root-color-level-bronze);
 
       &::before {
         content: 'Bronze';
       }
     }
 
-    ._retro-league-silver & {
-      color: var(--root-color-league-silver);
+    ._retro-level-silver & {
+      color: var(--root-color-level-silver);
 
       &::before {
         content: 'Silver';
       }
     }
 
-    ._retro-league-gold & {
-      color: var(--root-color-league-gold);
+    ._retro-level-gold & {
+      color: var(--root-color-level-gold);
 
       &::before {
         content: 'Gold';
       }
     }
 
-    ._retro-league-platinum & {
-      color: var(--root-color-league-platinum);
+    ._retro-level-platinum & {
+      color: var(--root-color-level-platinum);
 
       &::before {
         content: 'Platinum';
       }
     }
 
-    ._retro-league-sapphire & {
-      color: var(--root-color-league-sapphire);
+    ._retro-level-sapphire & {
+      color: var(--root-color-level-sapphire);
 
       &::before {
         content: 'Sapphire';
       }
     }
 
-    ._retro-league-emerald & {
-      color: var(--root-color-league-emerald);
+    ._retro-level-emerald & {
+      color: var(--root-color-level-emerald);
 
       &::before {
         content: 'Emerald';
       }
     }
 
-    ._retro-league-ruby & {
-      color: var(--root-color-league-ruby);
+    ._retro-level-ruby & {
+      color: var(--root-color-level-ruby);
 
       &::before {
         content: 'Ruby';
       }
     }
 
-    ._retro-league-diamond & {
-      color: var(--root-color-league-diamond);
+    ._retro-level-diamond & {
+      color: var(--root-color-level-diamond);
 
       &::before {
         content: 'Diamond';
