@@ -188,12 +188,42 @@
     margin-right: auto;
     margin-bottom: 18px;
     @include font(22px, 1.2, 700);
+
+    @include media-breakpoint-up(md) {
+      max-width: 290px;
+      margin-bottom: 26px;
+      @include font(26px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 300px;
+      margin-bottom: 30px;
+      @include font(30px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 440px;
+      margin-bottom: 40px;
+      @include font(40px, 1.2, 700);
+    }
   }
 
   &__level {
     text-align: center;
     text-transform: uppercase;
     @include font(22px, 1, 400, $second-font-family);
+
+    @include media-breakpoint-up(md) {
+      @include font(36px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(40px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(50px, 1, 400, $second-font-family);
+    }
 
     ._retro-level-bronze & {
       color: var(--root-color-level-bronze);
@@ -291,6 +321,21 @@
 
     ._retro-hold-raffle & {
       display: block;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 500px;
+      @include font(18px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 600px;
+      @include font(24px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 700px;
+      @include font(28px, 1.2, 700);
     }
   }
 }

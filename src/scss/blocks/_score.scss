@@ -10,6 +10,18 @@
 
   &__title {
     margin-bottom: 24px;
+
+    @include media-breakpoint-up(md) {
+      @include font(22px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(26px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(28px, 1.2, 700);
+    }
   }
 
   &__table {
@@ -88,6 +100,18 @@
     padding-bottom: 4px;
     @include font(16px, 1.2, 700);
 
+    @include media-breakpoint-up(md) {
+      @include font(18px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(22px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(24px, 1.2, 700);
+    }
+
     &:first-child {
       text-align: left;
       width: 70%;
@@ -104,6 +128,18 @@
     vertical-align: center;
     white-space: nowrap;
     @include font(14px, 1.2, 500);
+
+    @include media-breakpoint-up(md) {
+      @include font(17px, 1.2, 500);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(21px, 1.2, 500);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(23px, 1.2, 500);
+    }
 
     &:first-child {
       text-align: left;
