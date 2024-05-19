@@ -11,7 +11,6 @@ export default function validateInput() {
     const value = this.value.trim();
     this.classList.remove('_error');
 
-    // Проверяем, что введено минимум 5 символов (буквы, цифры или знаки препинания)
     if (value.length >= 5) {
       button.classList.remove(disabledState);
       button.removeAttribute('disabled');
@@ -19,9 +18,6 @@ export default function validateInput() {
       button.classList.add(disabledState);
       button.setAttribute('disabled', true);
     }
-
-    // Ваш код обработки события input здесь
-    console.log('Значение поля ввода:', this.value);
 
   });
 

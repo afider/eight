@@ -20,9 +20,6 @@ export default function getWalletData() {
     const walletId = inputWallet.value.replace(/\s/g, '');
     const url = `https://checker.anon.tg/wallet/${walletId}`;
 
-    console.log('url', url);
-    console.log('Clicked! ');
-    console.log(walletId);
     body.classList.add(loadingState);
     button.setAttribute('disabled', true);
     button.classList.add(disabledState);
@@ -56,7 +53,7 @@ export default function getWalletData() {
 
       if (error.message.includes('404')) {
         console.error('Данные не найдены');
-        // Дополнительные действия при ошибке 404
+
       } else {
         console.error('Произошла ошибка:', error);
       }
@@ -64,8 +61,6 @@ export default function getWalletData() {
   });
 
   closeButton.addEventListener('click', () => {
-
-    console.log('close button clicked!');
 
     inputWallet.value = '';
     setTimeout(function(){
@@ -119,16 +114,10 @@ export default function getWalletData() {
       donatedNode.textContent = data.data.reward.donated;
       walletNameNode.textContent = data.data.wallet_short;
 
-      console.log('_retro-level-', data.data.reward.level);
-      console.log('_retro-', data.data.reward.type);
-      console.log('_retro-hold-raffle', data.data.raffle);
-      console.log('_retro-hold-', data.data.reward.points.hold);
-      console.log('_retro-donate-', data.data.reward.points.donate);
     } else {
 
       body.classList.add('_retro-not-eligible');
       walletNameNode.textContent = data.data.wallet_short;
-      console.log('not eligible !!!');
     }
 
   }
