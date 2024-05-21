@@ -15,27 +15,38 @@ import { Sprite } from 'astro-icon';
   <div class="raffle">
 
   </div>
-  <div class="retro-hero__pic">
-    <div class="retro-hero__back-pre-raffle">
-      <div class="retro-hero__btn btn">Go raffle</div>
-    </div>
-    <div class="retro-hero__coundown">
 
-      <div class="countdown">
-  
-        <svg class="countdown__timer" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <circle class="countdown__circle" r="200" cx="200" cy="200"></circle>
-        </svg>
-        
-        <div class="countdown__number countdown_active"></div>
+  <div class="retro-hero__raffle-body">
+    <div class="retro-hero__pic">
+      <div class="retro-hero__back-pre-raffle">
+        <div class="retro-hero__btn btn">Go raffle</div>
       </div>
-
+      <div class="retro-hero__coundown">
+  
+        <div class="countdown">
+    
+          <svg class="countdown__timer" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <circle class="countdown__circle" r="200" cx="200" cy="200"></circle>
+          </svg>
+          
+          <div class="countdown__number countdown_active"></div>
+        </div>
+  
+      </div>
+      <div class="retro-hero__back-raffle"></div>
+      <div class="retro-hero__front-raffle"></div>
     </div>
-    <div class="retro-hero__back-raffle"></div>
-    <div class="retro-hero__front-raffle"></div>
+    <div class="retro-hero__title">Congratulations, you've&nbsp;received&nbsp;a</div>
+    <div class="retro-hero__raffle-level"></div>
   </div>
-  <div class="retro-hero__title">Congratulations, you've&nbsp;received&nbsp;a</div>
-  <div class="retro-hero__raffle-level"></div>
+
+  <div class="retro-hero__msg msg msg--offset-bottom">
+    <div class="msg__title">You'll be lucky next time!</div>
+    <div class="msg__content">
+      <p class="text">Unfortunately you didn't win, but we really hope you have better luck next time.</p>
+    </div>
+  </div>
+
 </div>
 
 <script>
