@@ -81,6 +81,15 @@ export default function getWalletData() {
     body.classList.remove('_retro-level-ruby');
     body.classList.remove('_retro-level-diamond');
 
+    body.classList.remove('_retro-raffle-level-bronze');
+    body.classList.remove('_retro-raffle-level-silver');
+    body.classList.remove('_retro-raffle-level-gold');
+    body.classList.remove('_retro-raffle-level-platinum');
+    body.classList.remove('_retro-raffle-level-sapphire');
+    body.classList.remove('_retro-raffle-level-emerald');
+    body.classList.remove('_retro-raffle-level-ruby');
+    body.classList.remove('_retro-raffle-level-diamond');
+
     body.classList.remove('_retro-hold-raffle');
 
     body.classList.remove('_retro-pass');
@@ -100,6 +109,8 @@ export default function getWalletData() {
     body.classList.remove('_retro-donate-8');
 
     body.classList.remove('_retro-not-eligible');
+    body.classList.remove('_retro-raffle-winner');
+    body.classList.remove('_retro-raffle-loser');
 
     if (data.data.eligible) {
       body.classList.add(`_retro-level-${data.data.reward.level}`);
@@ -118,6 +129,14 @@ export default function getWalletData() {
 
       body.classList.add('_retro-not-eligible');
       walletNameNode.textContent = data.data.wallet_short;
+    }
+
+
+    if (data.data.raffle_winner) {
+      body.classList.add('_retro-raffle-winner');
+      body.classList.add(`_retro-raffle-level-${data.data.raffle_reward_level}`);
+    } else {
+      body.classList.add('_retro-raffle-loser');
     }
 
   }
