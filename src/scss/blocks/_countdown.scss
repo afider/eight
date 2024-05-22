@@ -3,20 +3,41 @@
   
   position: relative;
   margin: auto;
-  height: $measurements;
-  width: $measurements;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  
   &__number {
     position: relative;
-    color: yellow;
     display: inline-block;
-    @include font(60px, 1, 400, $second-font-family);
-    animation: numberScaling 8s linear infinite ;
+
+    @include font(80px, 1, 400, $second-font-family);
+
+    @include media-breakpoint-up(sm) {
+      @include font(130px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(160px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(170px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(190px, 1, 400, $second-font-family);
+    }
+
+    ._raffle-countdown & {
+      animation: numberScaling 8s linear infinite, countdown-color 8s linear infinite;
+    }
   }
 
   &__timer {
@@ -35,58 +56,61 @@
     stroke-width: 30px;
     stroke-linecap: round;
     stroke: red;
-    fill: rgba(10, 200, 200, 0.3);
-    animation: countdown 8s linear infinite ;
+    fill: rgba(255, 255, 255, 0.1);
+
+    ._raffle-countdown & {
+      animation: countdown 8s linear infinite;
+    }
   }
 }
 
 @keyframes countdown {
   0% {
-    stroke: green;
+    stroke: #8892ee;
     stroke-dashoffset: 0px;
   }
   
   33% {
-    stroke: yellow;
+    stroke: #B4BAEC;
   }
   
   66% {
-    stroke: red;
+    stroke: #FFBAAB;
   }
   
   90% {
-    stroke: #1e90ff;
+    stroke: #F9E3B0;
   }
   
   100% {
-    stroke: #1e90ff;
+    stroke: #efc156;
     stroke-dashoffset: 1256.129px;
   }
 }
 
-@keyframes countdown_ {
-  0% {  
-    stroke: green;
-    stroke-dashoffset: 0px;
+
+@keyframes countdown-color {
+  0% {
+    color: #8892ee;
   }
   
   33% {
-    stroke: yellow;
+    color: #B4BAEC;
   }
   
   66% {
-    stroke: red;
+    color: #FFBAAB;
   }
   
   90% {
-    stroke: #1e90ff;
+    color: #F9E3B0;
   }
   
   100% {
-    stroke: #1e90ff;
-    stroke-dashoffset: 1256.129px;
+    color: #efc156;
   }
 }
+
 
 @keyframes numberScaling {
   0% {

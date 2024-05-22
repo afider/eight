@@ -22,8 +22,22 @@
     margin-bottom: 112px;
   }
 
-  ._retro-raffle-loser &__msg {
-    display: block;
+  &__msg {
+    display: none;
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    inset: 0;
+    margin-bottom: 0 !important;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    ._raffle-result._retro-raffle-loser & {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__back {
@@ -61,6 +75,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateY(-20px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration-slow);
     aspect-ratio: 616/354;
     background-image: image-set(
       url('/src/assets/images/retro/box/box-pre-raffle-back.avif') type('image/avif') 1x,
@@ -70,14 +87,23 @@
       url('/src/assets/images/retro/box/box-pre-raffle-back.png') 1x,
       url('/src/assets/images/retro/box/box-pre-raffle-back.png') 2x
     );
+
+    ._raffle-start & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
   }
 
   &__back-raffle {
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     background-size: cover;
     position: absolute;
     inset: 0;
+    transform: translateY(-40px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration-slow);
     aspect-ratio: 616/354;
     background-image: image-set(
       url('/src/assets/images/retro/box/box-raffle-back.avif') type('image/avif') 1x,
@@ -87,6 +113,12 @@
       url('/src/assets/images/retro/box/box-raffle-back.png') 1x,
       url('/src/assets/images/retro/box/box-raffle-back.png') 2x
     );
+
+    ._raffle-result:not(._retro-raffle-loser) & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
   }
 
   &__front,
@@ -113,8 +145,20 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
+    transform: translateY(-20px);
     inset: 0;
-    background: red;
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration-slow);
+
+    ._raffle-countdown & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    ._raffle-result & {
+      transition: none;
+    }
   }
 
   &__front {
@@ -301,8 +345,15 @@
   }
 
   &__front-raffle {
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration-slow);
+
+    ._raffle-result:not(._retro-raffle-loser) & {
+      opacity: 1;
+      visibility: visible;
+    }
 
     ._retro-raffle-level-bronze & {
       background-image: image-set(
@@ -398,6 +449,15 @@
     margin-bottom: 50px;
   }
 
+  &__raffle-title {
+    display: none;
+
+    ._raffle-result:not(._retro-raffle-loser) & {
+      display: block;
+    }
+  }
+
+  &__raffle-title,
   &__title {
     max-width: 300px;
     text-align: center;
@@ -524,9 +584,14 @@
 
 
   &__raffle-level {
+    display: none;
     text-align: center;
     text-transform: uppercase;
     @include font(22px, 1, 400, $second-font-family);
+
+    ._raffle-result:not(._retro-raffle-loser) & {
+      display: block;
+    }
 
     @include media-breakpoint-up(md) {
       @include font(36px, 1, 400, $second-font-family);
@@ -612,6 +677,7 @@
   &__raffle {
     max-width: 320px;
     padding-top: 45px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;

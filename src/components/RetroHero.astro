@@ -19,7 +19,7 @@ import { Sprite } from 'astro-icon';
   <div class="retro-hero__raffle-body">
     <div class="retro-hero__pic">
       <div class="retro-hero__back-pre-raffle">
-        <div class="retro-hero__btn btn">Go raffle</div>
+        <button class="retro-hero__btn btn" data-go-raffle-button>Go raffle</button>
       </div>
       <div class="retro-hero__coundown">
   
@@ -35,31 +35,18 @@ import { Sprite } from 'astro-icon';
       </div>
       <div class="retro-hero__back-raffle"></div>
       <div class="retro-hero__front-raffle"></div>
+      <div class="retro-hero__msg msg msg--offset-bottom">
+        <div class="msg__title">You'll be lucky next time!</div>
+        <div class="msg__content">
+          <p class="text">Unfortunately you didn't&nbsp;win, but we&nbsp;really hope you&nbsp;have better luck&nbsp;next&nbsp;time 🖤</p>
+        </div>
+      </div>
     </div>
-    <div class="retro-hero__title">Congratulations, you've&nbsp;received&nbsp;a</div>
+    <div class="retro-hero__raffle-title">Congratulations! Уou've&nbsp;received&nbsp;a</div>
     <div class="retro-hero__raffle-level"></div>
-  </div>
-
-  <div class="retro-hero__msg msg msg--offset-bottom">
-    <div class="msg__title">You'll be lucky next time!</div>
-    <div class="msg__content">
-      <p class="text">Unfortunately you didn't win, but we really hope you have better luck next time.</p>
-    </div>
   </div>
 
 </div>
 
-<script>
-  const countdownNumberEl = document.querySelector('.countdown_active');
-let countdown = 8;
-let timer = setInterval(function() {
-  countdown = (--countdown <= 0) ? 8 : countdown;
-  countdownNumberEl.textContent = countdown;
+<canvas id="confetti" class="confetti"></canvas>
 
-  if (countdown === 0) {
-    clearInterval(timer);
-  }
-}, 1000);
-
-countdownNumberEl.textContent = countdown;
-</script>
