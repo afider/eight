@@ -30,12 +30,12 @@ export default function getWalletData() {
     fetch(url)
     .then(response => {
       if (!response.ok) {
-        throw new Error(`Ошибка при получении данных: ${response.status}`);
+        throw new Error(`error receiving data: ${response.status}`);
       }
       return response.json();
     })
     .then(data => {
-      console.log('Полученные данные:', data);
+      console.log('received data:', data);
       body.classList.remove(loadingState);
       button.classList.remove(disabledState);
       button.classList.remove(loadingState);
@@ -54,10 +54,10 @@ export default function getWalletData() {
       inputWallet.classList.add(errorState);
 
       if (error.message.includes('404')) {
-        console.error('Данные не найдены');
+        console.error('No data found');
 
       } else {
-        console.error('Произошла ошибка:', error);
+        console.error('error:', error);
       }
     });
   });
@@ -80,8 +80,6 @@ export default function getWalletData() {
   });
 
   goRaffleButton.addEventListener('click', () => {
-
-    console.log('go raffle!');
 
     body.classList.remove('_raffle-start');
     body.classList.add('_raffle-countdown');
