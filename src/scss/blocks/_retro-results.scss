@@ -6,7 +6,7 @@
   // transform: translateY(-50px);
   // transition-property: opacity, visibility, transform;
   // transition-duration: 1000ms;
-  display: block;
+  display: none;
 
   @include media-breakpoint-up(md) {
     padding-top: 20px;
