@@ -1,7 +1,77 @@
 .boxes {
 
   &__list {
-    
+    display: grid;
+    gap: 80px;
+
+    @include media-breakpoint-up(md) {
+      gap: 100px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      gap: 100px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      gap: 120px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 34px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 50px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 60px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    @include font(22px, 1.2, 700);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 12px;
+      @include font(26px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 14px;
+      @include font(32px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 18px;
+      @include font(44px, 1.2, 700);
+    }
+  }
+
+  &__sub-title {
+    display: inline-block;
+    background: #B4BAEC;
+    background: linear-gradient(to right, #B4BAEC 41%, #FFBAAB 56%, #F9E3B0 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include font(16px, 1.2, 700);
+
+    @include media-breakpoint-up(md) {
+      @include font(20px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(24px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(32px, 1.2, 700);
+    }
   }
 
   &__item {

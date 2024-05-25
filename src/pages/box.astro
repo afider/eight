@@ -37,14 +37,16 @@ const pageTitle = "ANON";
 
     <div class="box-results" data-box-results>
 
-      <BoxWallet />
+      
       <BoxModal />
 
       <div class="content">
 
-        <div class="boxes">
+        <BoxWallet />
+
+        <!-- <div class="boxes">
           <ul class="boxes__list">
-            <!-- повторяем это столько раз, сколько data.data.boxes -->
+            
             <li class="boxes__item">
               <div class="score">
                 <div class="score__table">
@@ -52,7 +54,7 @@ const pageTitle = "ANON";
                     <div class="score__label">Item</div>
                     <div class="score__label">Probability</div>
                   </div>
-                  <!-- повторяем это столько раз, сколько box.rewards -->
+                  
                   <div class="score__item">
                     <div class="score__value">reward.name</div>
                     <div class="score__value">reward.luck_percent</div>
@@ -76,7 +78,7 @@ const pageTitle = "ANON";
                     <div class="score__label">Item</div>
                     <div class="score__label">Quantity</div>
                   </div>
-                  <!-- повторяем это столько раз, сколько box.rewards -->
+                  
                   <div class="score__item">
                     <div class="score__value">
                       <div class="box-item">
@@ -96,11 +98,10 @@ const pageTitle = "ANON";
             </li>
             
           </ul>
-        </div>
+        </div> -->
 
-        <h1>Список Boxes</h1>
         <div class="boxes">
-          <ul id="boxes-list"></ul>
+          <ul id="boxes-list" class="boxes__list"></ul>
         </div>
 
       </div>

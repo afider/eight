@@ -13,10 +13,66 @@ export default function getBoxData() {
   const activeState = '_active';
   const errorState = '_error';
   const body = document.getElementsByTagName('body')[0];
-
+  const openingVideo = document.querySelectorAll('[data-opening-video]');
   const walletNameNode = document.querySelector('[data-box-wallet-name]');
-  
   const resultsNode = document.querySelector('[data-box-results]');
+
+  const dataObj = {data: {
+    found: true,
+    wallet: "UQBgHYhgeluxz6lMeLFtIUo6pqRfdGBCbJB6sEByPHpGfXz9",
+    wallet_short: "UQBgH*****GfXz9",
+    total_boxes: 2,
+    boxes: [
+      {
+        box_address: "qwe",
+        box_level: "bronze",
+        rewards: [
+          {
+            type: "nft",
+            name: "Durev NFT",
+            amount: 1,
+            luck_percent: 56,
+          },
+          {
+            type: "jetton",
+            name: "Durev",
+            amount: 8888,
+            luck_percent: 100,
+          },
+          {
+            type: "nft",
+            name: "Pixel NFT",
+            amount: 0,
+            luck_percent: 5,
+          },
+        ],
+      },
+      {
+        box_address: "DDD",
+        box_level: "ruby",
+        rewards: [
+          {
+            type: "XP",
+            name: "ANON XP",
+            amount: 200,
+            luck_percent: 44,
+          },
+          {
+            type: "jetton",
+            name: "Durev",
+            amount: 30,
+            luck_percent: 99,
+          },
+          {
+            type: "nft",
+            name: "Stories NFT",
+            amount: 0,
+            luck_percent: 7,
+          },
+        ],
+      },
+    ],
+  }}
 
   console.log('button ', button);
 
@@ -26,62 +82,7 @@ export default function getBoxData() {
 
     const walletId = inputWallet.value.replace(/\s/g, '');
     const url = `https://checker.anon.tg/wallet/${walletId}`;
-    const dataObj = {data: {
-      found: true,
-      wallet: "UQBgHYhgeluxz6lMeLFtIUo6pqRfdGBCbJB6sEByPHpGfXz9",
-      wallet_short: "UQBgH*****GfXz9",
-      total_boxes: 2,
-      boxes: [
-        {
-          box_address: "qwe",
-          box_level: "bronze",
-          rewards: [
-            {
-              type: "nft",
-              name: "Durev NFT",
-              amount: 1,
-              luck_percent: 56,
-            },
-            {
-              type: "jetton",
-              name: "Durev",
-              amount: 8888,
-              luck_percent: 100,
-            },
-            {
-              type: "nft",
-              name: "Pixel NFT",
-              amount: 0,
-              luck_percent: 5,
-            },
-          ],
-        },
-        {
-          box_address: "DDD",
-          box_level: "ruby",
-          rewards: [
-            {
-              type: "XP",
-              name: "ANON XP",
-              amount: 200,
-              luck_percent: 44,
-            },
-            {
-              type: "jetton",
-              name: "Durev",
-              amount: 30,
-              luck_percent: 99,
-            },
-            {
-              type: "nft",
-              name: "Stories NFT",
-              amount: 0,
-              luck_percent: 7,
-            },
-          ],
-        },
-      ],
-    }}
+    
 
     console.log('Data ', dataObj);
 
@@ -129,6 +130,9 @@ export default function getBoxData() {
     
   });
 
+  // temp
+  setStatusClassnames(dataObj);
+
   closeButton.addEventListener('click', () => {
 
     console.log('closeButton');
@@ -164,7 +168,7 @@ dataObj.data.boxes.forEach(box => {
     rewardsHTML += `
       <div class="score__item">
         <div class="score__value">${reward.name}</div>
-        <div class="score__value">${reward.luck_percent}</div>
+        <div class="score__value">${reward.luck_percent}%</div>
       </div>
     `;
   });
@@ -188,6 +192,10 @@ dataObj.data.boxes.forEach(box => {
   });
 
   boxItem.innerHTML = `
+    <div class="boxes__header">
+      <div class="boxes__title">BOX REVEAL</div>
+      <div class="boxes__sub-title">List of things you can win</div>
+    </div>
     <div class="score">
       <div class="score__table">
         <div class="score__item">
@@ -199,9 +207,9 @@ dataObj.data.boxes.forEach(box => {
     </div>
     <div class="boxes__pre-note">Click the open button to see what prizes you've won.</div>
     <div class="box-checker">
-      <button class="box-checker__btn" data-check-btn>Open</button>
+      <button class="box-checker__btn btn" data-check-btn>Open</button>
     </div>
-    <div class="boxes__title">
+    <div class="boxes__congrat">
       Congratulations, here are the prizes you've won
     </div>
     <div class="score">
@@ -256,12 +264,22 @@ dataObj.data.boxes.forEach(box => {
   }
 
   function showOpening() {
+    document.documentElement.setAttribute('data-modal-active', true);
     body.classList.add(openingState);
+    resetAndPlayVideo();
 
     setTimeout(function() {
+      document.documentElement.setAttribute('data-modal-active', false);
       body.classList.remove(openingState);
-    }, 5000);
+    }, 8000);
   }
 
+  function resetAndPlayVideo() {
+    openingVideo.forEach(function(video) {
+      video.currentTime = 0;
+      video.play();
+  });
 
+
+}
 }
