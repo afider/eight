@@ -1,0 +1,15 @@
+.box-modal {
+  position: fixed;
+  inset: 0;
+  background: red;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition-duration: var(--root-animation-duration);
+
+  ._box-opening & {
+    opacity: 1;
+    visibility: visible;
+  }
+}

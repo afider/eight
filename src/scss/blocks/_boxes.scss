@@ -1,0 +1,12 @@
+.boxes {
+
+  &__list {
+    
+  }
+
+  &__item {
+    &._active {
+      background: yellowgreen;
+    }
+  }
+}
