@@ -39,17 +39,17 @@
 
     &._reveal {
       background-color: #000;
-      background-image: url('/src/assets/images/reveal/reveal.webp');
+      background-image: url('/src/assets/images/reveal/reveal-2.webp');
       background-repeat: no-repeat;
       background-position: top center;
       background-size: contain;
 
       @include media-breakpoint-up(md) {
-        background-image: url('/src/assets/images/reveal/reveal-md.webp');
+        background-image: url('/src/assets/images/reveal/reveal-2-md.webp');
       }
 
       @include media-breakpoint-up(xl) {
-        background-image: url('/src/assets/images/reveal/reveal-xl.webp');
+        background-image: url('/src/assets/images/reveal/reveal-2-xl.webp');
       }
     }
   }
