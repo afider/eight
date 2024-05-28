@@ -6,160 +6,165 @@ export default function getBoxData() {
 
   const inputWallet = document.getElementById('wallet');
   const button = document.getElementById('wallet-button');
+  const shareButton = document.querySelector('[data-share-button]');
   const closeButton = document.querySelector('[data-box-wallet-close]');
   const closeModalButton = document.querySelector('[data-close-modal-btn]');
   const loadingState = '_loading';
+  const loadingSharedState = '_loading-shared';
+  const showSaredButtonState = '_share-button';
   const openingState = '_box-opening';
   const hasOpenedState = '_box-has-opened';
   const disabledState = '_disabled';
   const activeState = '_active';
   const errorState = '_error';
+  const sharedState = '_shared';
   const body = document.getElementsByTagName('body')[0];
   const openingVideo = document.querySelectorAll('[data-opening-video]');
   const walletNameNode = document.querySelector('[data-box-wallet-name]');
   const resultsNode = document.querySelector('[data-box-results]');
 
-  const dataObj = {data: {
-    found: true,
-    wallet: "UQBgHYhgeluxz6lMeLFtIUo6pqRfdGBCbJB6sEByPHpGfXz9",
-    wallet_short: "UQBgH*****GfXz9",
-    total_boxes: 2,
-    boxes: [
-    {
-        box_address: "eluxzlMeUQBgHYLFtIUo6pqRfdGB6lMe",
-        box_level: "bronze",
-        rewards: [
-          {
-            type: "nft",
-            name: "Egg Wisdom",
-            amount: 8,
-            luck_percent: 56,
-          },
-          {
-            type: "jetton",
-            name: "ANON",
-            amount: 8888,
-            luck_percent: 99,
-          },
-          {
-            type: "sbt",
-            name: "ANON XP",
-            amount: 2,
-            luck_percent: 16,
-          },
-          {
-            type: "nft",
-            name: "ANON TV",
-            amount: 1,
-            luck_percent: 6,
-          },
-          {
-            type: "nft",
-            name: "The Pixels",
-            amount: 9,
-            luck_percent: 10,
-          },
-          {
-            type: "nft",
-            name: "Anonymous numbers",
-            amount: 1,
-            luck_percent: 2,
-          },
-          {
-            type: "nft",
-            name: "Storm",
-            amount: 20,
-            luck_percent: 50,
-          },
-          {
-            type: "nft",
-            name: "Zifretta",
-            amount: 7,
-            luck_percent: 23,
-          },
-          {
-            type: "jetton",
-            name: "Jetton",
-            amount: 2500,
-            luck_percent: 13,
-          },
-          {
-            type: "nft",
-            name: "ANON Agent ID",
-            amount: 3,
-            luck_percent: 7,
-          },
-        ],
-      },
-      {
-        box_address: "dGRfyzBCbJB6BgHYh",
-        box_level: "ruby",
-        rewards: [
-          {
-            type: "nft",
-            name: "Egg Wisdom",
-            amount: 14,
-            luck_percent: 87,
-          },
-          {
-            type: "jetton",
-            name: "ANON",
-            amount: 35000,
-            luck_percent: 24,
-          },
-          {
-            type: "sbt",
-            name: "ANON XP",
-            amount: 0,
-            luck_percent: 1,
-          },
-          {
-            type: "nft",
-            name: "ANON TV",
-            amount: 0,
-            luck_percent: 0,
-          },
-          {
-            type: "nft",
-            name: "The Pixels",
-            amount: 3,
-            luck_percent: 2,
-          },
-          {
-            type: "nft",
-            name: "Anonymous numbers",
-            amount: 0,
-            luck_percent: 0,
-          },
-          {
-            type: "nft",
-            name: "Storm",
-            amount: 14,
-            luck_percent: 33,
-          },
-          {
-            type: "nft",
-            name: "Zifretta",
-            amount: 0,
-            luck_percent: 0,
-          },
-          {
-            type: "jetton",
-            name: "Jetton",
-            amount: 415,
-            luck_percent: 48,
-          },
-          {
-            type: "nft",
-            name: "ANON Agent ID",
-            amount: 1,
-            luck_percent: 6,
-          },
-        ],
-      },
-    ],
-  }
-}
+//   const data = {data: {
+//     found: true,
+//     wallet: "UQBgHYhgeluxz6lMeLFtIUo6pqRfdGBCbJB6sEByPHpGfXz9",
+//     wallet_short: "UQBgH*****GfXz9",
+//     total_boxes: 2,
+//     boxes: [
+//     {
+//         box_address: "eluxzlMeUQBgHYLFtIUo6pqRfdGB6lMe",
+//         box_level: "bronze",
+//         rewards: [
+//           {
+//             type: "nft",
+//             name: "Egg Wisdom",
+//             amount: 8,
+//             luck_percent: 56,
+//           },
+//           {
+//             type: "jetton",
+//             name: "ANON",
+//             amount: 8888,
+//             luck_percent: 99,
+//           },
+//           {
+//             type: "sbt",
+//             name: "ANON XP",
+//             amount: 2,
+//             luck_percent: 16,
+//           },
+//           {
+//             type: "nft",
+//             name: "ANON TV",
+//             amount: 1,
+//             luck_percent: 6,
+//           },
+//           {
+//             type: "nft",
+//             name: "The Pixels",
+//             amount: 9,
+//             luck_percent: 10,
+//           },
+//           {
+//             type: "nft",
+//             name: "Anonymous numbers",
+//             amount: 1,
+//             luck_percent: 2,
+//           },
+//           {
+//             type: "nft",
+//             name: "Storm",
+//             amount: 20,
+//             luck_percent: 50,
+//           },
+//           {
+//             type: "nft",
+//             name: "Zifretta",
+//             amount: 7,
+//             luck_percent: 23,
+//           },
+//           {
+//             type: "jetton",
+//             name: "Jetton",
+//             amount: 2500,
+//             luck_percent: 13,
+//           },
+//           {
+//             type: "nft",
+//             name: "ANON Agent ID",
+//             amount: 3,
+//             luck_percent: 7,
+//           },
+//         ],
+//       },
+//       {
+//         box_address: "dGRfyzBCbJB6BgHYh",
+//         box_level: "ruby",
+//         rewards: [
+//           {
+//             type: "nft",
+//             name: "Egg Wisdom",
+//             amount: 14,
+//             luck_percent: 87,
+//           },
+//           {
+//             type: "jetton",
+//             name: "ANON",
+//             amount: 35000,
+//             luck_percent: 24,
+//           },
+//           {
+//             type: "sbt",
+//             name: "ANON XP",
+//             amount: 0,
+//             luck_percent: 1,
+//           },
+//           {
+//             type: "nft",
+//             name: "ANON TV",
+//             amount: 0,
+//             luck_percent: 0,
+//           },
+//           {
+//             type: "nft",
+//             name: "The Pixels",
+//             amount: 3,
+//             luck_percent: 2,
+//           },
+//           {
+//             type: "nft",
+//             name: "Anonymous numbers",
+//             amount: 0,
+//             luck_percent: 0,
+//           },
+//           {
+//             type: "nft",
+//             name: "Storm",
+//             amount: 14,
+//             luck_percent: 33,
+//           },
+//           {
+//             type: "nft",
+//             name: "Zifretta",
+//             amount: 0,
+//             luck_percent: 0,
+//           },
+//           {
+//             type: "jetton",
+//             name: "Jetton",
+//             amount: 415,
+//             luck_percent: 48,
+//           },
+//           {
+//             type: "nft",
+//             name: "ANON Agent ID",
+//             amount: 1,
+//             luck_percent: 6,
+//           },
+//         ],
+//       },
+//     ],
+//   }
+// }
+
 
   console.log('button ', button);
 
@@ -167,29 +172,96 @@ export default function getBoxData() {
 
     console.log('button');
 
-    const walletId = inputWallet.value.replace(/\s/g, '');
-    const url = `https://checker.anon.tg/wallet/${walletId}`;
+    doMagic();
 
-    console.log('Data ', dataObj);
+  });
+
+  shareButton.addEventListener('click', (el) => {
+
+    if (!navigator.clipboard) {
+      return;
+    }
+
+    const url = 'https://anon.tg/box/?id=' + body.getAttribute('data-wallet');
+
+    console.log('url', url);
+
+    navigator.clipboard.writeText(url).then(function() {
+
+      el.target.closest('button').classList.add(activeState);
+
+      setTimeout(() => {
+        el.target.closest('button').classList.remove(activeState);
+      }, 1300);
+
+    }, function(err) {
+      console.error('Could not copy text: ', err);
+    });
+    
+
+  });
+
+  function doMagic(sharedId) {
+    let url;
+
+    if(sharedId) {
+      url = `https://checker.anon.tg/reveal/${sharedId}`;
+      console.log('sharedId !!!!!!!!!!!!');
+    } else {
+      const walletId = inputWallet.value.replace(/\s/g, '');
+      body.setAttribute('data-wallet', walletId);
+      url = `https://checker.anon.tg/reveal/${walletId}`;
+    }
 
     body.classList.add(loadingState);
     button.setAttribute('disabled', true);
     button.classList.add(disabledState);
     button.classList.add(loadingState);
 
+    fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`error receiving data: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('received data:', data);
+      body.classList.remove(loadingState);
+      button.classList.remove(disabledState);
+      button.classList.remove(loadingState);
+      button.removeAttribute('disabled');
 
-    console.log('received data:', dataObj);
-    body.classList.remove(loadingState);
-    button.classList.remove(disabledState);
-    button.classList.remove(loadingState);
-    button.removeAttribute('disabled');
+      addBoxesHtml(data);
+      addBoxItemsListHtml(data);
+      checkNode.classList.remove(activeState);
+      resultsNode.classList.add(activeState);
 
-    addBoxesHtml(dataObj);
-    addBoxItemsListHtml(dataObj);
-    checkNode.classList.remove(activeState);
-    resultsNode.classList.add(activeState);
+      if(sharedId) {
+        body.classList.remove(loadingSharedState);
+        body.classList.add(sharedState);
+      }
+      
+    })
+    .catch(error => {
+      body.classList.remove(loadingState);
+      button.classList.remove(disabledState);
+      button.classList.remove(loadingState);
+      button.removeAttribute('disabled');
+      inputWallet.classList.add(errorState);
 
-  });
+      if(sharedId) {
+        body.classList.remove(loadingSharedState);
+      }
+
+      if (error.message.includes('404')) {
+        console.error('No data found');
+
+      } else {
+        console.error('error:', error);
+      }
+    });
+  }
 
   closeButton.addEventListener('click', () => {
     const boxItems = document.querySelectorAll('.js-box-item');
@@ -206,6 +278,10 @@ export default function getBoxData() {
     button.setAttribute('disabled', true);
     checkNode.classList.add(activeState);
     resultsNode.classList.remove(activeState);
+    body.classList.remove(sharedState);
+    body.classList.remove(loadingSharedState);
+    body.classList.remove(showSaredButtonState);
+    body.removeAttribute('data-wallet');
   });
 
   closeModalButton.addEventListener('click', () => {
@@ -229,17 +305,21 @@ export default function getBoxData() {
 
     console.log('close boxAddress', boxAddress);
 
+    setTimeout(function(){
+      showSaredButton();
+    }, 2000);
+
   });
 
-  function addBoxesHtml(dataObj) {
+  function addBoxesHtml(data) {
 
     console.log('addBoxesHtml');
 
-    walletNameNode.textContent = dataObj.data.wallet_short;
+    walletNameNode.textContent = data.data.wallet_short;
 
     const boxesList = document.getElementById('boxes-list');
 
-    dataObj.data.boxes.forEach(box => {
+    data.data.boxes.forEach(box => {
       const boxItem = document.createElement('li');
       boxItem.className = 'boxes__item js-box-item';
       boxItem.setAttribute('data-box-address', box.box_address);
@@ -264,7 +344,7 @@ export default function getBoxData() {
                 <div class="box-item__pic" data-box-item-name="${reward.name}"></div>
                 <div class="box-item__body">
                   <div class="box-item__type">${reward.type}</div>
-                  <div class="box-item__name">${reward.name}</div>
+                  <div class="box-item__name">${reward.name} <span class="box-item__rarity">${(reward.rarity !== null ? reward.rarity : '')}</span></div>
                 </div>
               </div>
             </div>
@@ -317,12 +397,12 @@ export default function getBoxData() {
     });
   }
 
-function addBoxItemsListHtml(dataObj) {
+function addBoxItemsListHtml(data) {
     const listElement = document.getElementById('box-items-logo-list');
     const ulElement = document.createElement('ul');
     ulElement.className = 'box-items-logo-list__list';
   
-    dataObj.data.boxes.forEach((box) => {
+    data.data.boxes.forEach((box) => {
       const liElement = document.createElement('li');
       liElement.className = 'box-items-logo-list__item';
       liElement.dataset.boxAddress = box.box_address;
@@ -378,5 +458,32 @@ function addBoxItemsListHtml(dataObj) {
       video.play();
   });
 
-}
+  }
+
+  function showSaredButton() {
+      const boxItems = document.querySelectorAll('.js-box-item');
+      let allActive = true;
+      boxItems.forEach(element => {
+        if (!element.classList.contains('_active')) {
+            allActive = false;
+        }
+      });
+
+      if (allActive && navigator.clipboard) {
+          document.body.classList.add(showSaredButtonState);
+      }
+  }
+
+  shareResults();
+
+  function shareResults() {
+    console.log('shareResults');
+    let url = new URL(window.location.href);
+    let paramValue = url.searchParams.get('id');
+    if (paramValue !== null) {
+      console.log('Значение параметра:', paramValue);
+      body.classList.add(loadingSharedState);
+      doMagic(paramValue);
+    }
+  }
 }
