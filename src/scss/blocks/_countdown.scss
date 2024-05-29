@@ -19,7 +19,11 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 281px;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 400px;
+    }
 
     @include media-breakpoint-up(xl) {
       max-width: 500px;
@@ -36,30 +40,38 @@
     gap: 10px;
     flex-direction: column;
     justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      gap: 10px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      gap: 16px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      gap: 18px;
+    }
   }
 
   &__val {
     text-align: center;
-    @include font(14px, 1, 400, $second-font-family);
-
-    @include media-breakpoint-up(xsm) {
-      @include font(18px, 1, 400, $second-font-family);
-    }
+    @include font(24px, 1, 400, $second-font-family);
 
     @include media-breakpoint-up(sm) {
-      @include font(24px, 1, 400, $second-font-family);
+      @include font(42px, 1, 400, $second-font-family);
     }
 
     @include media-breakpoint-up(md) {
-      @include font(28px, 1, 400, $second-font-family);
+      @include font(44px, 1, 400, $second-font-family);
     }
 
     @include media-breakpoint-up(xl) {
-      @include font(34px, 1, 400, $second-font-family);
+      @include font(58px, 1, 400, $second-font-family);
     }
 
     @include media-breakpoint-up(xxl) {
-      @include font(52px, 1, 400, $second-font-family);
+      @include font(64px, 1, 400, $second-font-family);
     }
   }
 
@@ -69,15 +81,15 @@
     @include font(12px, 1);
 
     @include media-breakpoint-up(md) {
-      @include font(14px, 1);
+      @include font(16px, 1);
     }
 
     @include media-breakpoint-up(xl) {
-      @include font(15px, 1);
+      @include font(22px, 1);
     }
 
     @include media-breakpoint-up(xxl) {
-      @include font(18px, 1);
+      @include font(24px, 1);
     }
   }
 }
