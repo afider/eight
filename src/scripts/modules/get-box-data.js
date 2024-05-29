@@ -318,6 +318,7 @@ export default function getBoxData() {
     walletNameNode.textContent = data.data.wallet_short;
 
     const boxesList = document.getElementById('boxes-list');
+    boxesList.innerHTML = '';
 
     data.data.boxes.forEach(box => {
       const boxItem = document.createElement('li');
@@ -374,6 +375,7 @@ export default function getBoxData() {
         <div class="boxes__congrat">
           Congratulations, <br/> here are the prizes you&rsquo;ve won
         </div>
+        <div class="boxes__congrat-level boxes__congrat-level--${box.box_level}">${box.box_level} box</div>
         <div class="boxes__result score score--box-items">
           <div class="score__table">
             <div class="score__item">

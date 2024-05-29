@@ -90,6 +90,61 @@
     display: block;
   }
 
+  &__congrat-level {
+    text-transform: uppercase;
+    margin-bottom: 44px;
+    text-align: center;
+
+    @include font(22px, 1, 400, $second-font-family);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 64px;
+      @include font(36px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 74px;
+      @include font(40px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 88px;
+      @include font(50px, 1, 400, $second-font-family);
+    }
+
+    &--bronze {
+      color: var(--root-color-level-bronze);
+    }
+
+    &--silver {
+      color: var(--root-color-level-silver);
+    }
+
+    &--gold {
+      color: var(--root-color-level-gold);
+    }
+
+    &--platinum {
+      color: var(--root-color-level-platinum);
+    }
+
+    &--sapphire {
+      color: var(--root-color-level-sapphire);
+    }
+
+    &--emerald {
+      color: var(--root-color-level-emerald);
+    }
+
+    &--ruby {
+      color: var(--root-color-level-ruby);
+    }
+
+    &--diamond {
+      color: var(--root-color-level-diamond);
+    }
+  }
+
   &__congrat {
     display: none;
     text-align: center;
@@ -97,21 +152,21 @@
     background: linear-gradient(to right, #B4BAEC 41%, #FFBAAB 56%, #F9E3B0 66%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 44px;
+    margin-bottom: 24px;
     @include font(16px, 1.2, 700);
 
     @include media-breakpoint-up(md) {
-      margin-bottom: 64px;
+      margin-bottom: 34px;
       @include font(20px, 1.2, 700);
     }
 
     @include media-breakpoint-up(xl) {
-      margin-bottom: 74px;
+      margin-bottom: 44px;
       @include font(24px, 1.2, 700);
     }
 
     @include media-breakpoint-up(xxl) {
-      margin-bottom: 88px;
+      margin-bottom: 58px;
       @include font(32px, 1.2, 700);
     }
 
@@ -196,4 +251,15 @@
       margin-bottom: 88px;
     }
   }
+
+  ._shared &__pre-note,
+  ._shared &__box-checker {
+    display: none;
+  }
+
+  ._shared &__congrat,
+  ._shared &__result {
+    display: block;
+  }
+
 }

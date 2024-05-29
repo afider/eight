@@ -1,5 +1,5 @@
 .box-results {
-  //display: none;
+  display: none;
 
   &._active {
     display: block;
@@ -10,6 +10,17 @@
     display: flex;
     justify-content: center;
     position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration);
+
+    ._share-button & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
 
     @include media-breakpoint-up(md) {
       padding-top: 64px;
@@ -148,5 +159,9 @@
       width: 38px;
       height: 38px;
     }
+  }
+
+  ._shared &__actions {
+    display: none;
   }
 }
