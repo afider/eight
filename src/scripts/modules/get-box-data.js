@@ -164,7 +164,7 @@ export default function getBoxData() {
 
     setTimeout(function(){
       showSaredButton();
-    }, 2000);
+    }, 1000);
 
   });
 
@@ -232,7 +232,7 @@ export default function getBoxData() {
         <div class="boxes__congrat">
           Congratulations, <br/> here are the prizes you&rsquo;ve won
         </div>
-        <div class="boxes__congrat-level boxes__congrat-level--${box.box_level}">${box.box_level} box</div>
+        <div class="boxes__congrat-level boxes__congrat-level--${box.box_level}">${box.box_level} box items</div>
         <div class="boxes__result score score--box-items">
           <div class="score__table">
             <div class="score__item">
@@ -295,29 +295,42 @@ function addBoxItemsListHtml(data) {
     document.documentElement.setAttribute('data-modal-active', true);
     body.classList.add(openingState);
     body.setAttribute('data-box-address', boxAddress);
-
     const items = document.querySelectorAll('.box-items-logo-list__item[data-box-address]');
 
-    resetAndPlayVideo();
+    let allVideosEnded = false;
 
-    setTimeout(function() {
-      body.classList.add(hasOpenedState);
-
-    items.forEach(function(item) {
-        if (boxAddress === item.getAttribute('data-box-address')) {
-            item.classList.add('_active');
-        }
-    });
-    }, 5600);
-  }
-
-  function resetAndPlayVideo() {
     openingVideo.forEach(function(video) {
+      video.addEventListener('ended', function() {
+          if (!allVideosEnded) {
+              allVideosEnded = true;
+
+              body.classList.add(hasOpenedState);
+
+              items.forEach(function(item) {
+                  if (boxAddress === item.getAttribute('data-box-address')) {
+                      item.classList.add('_active');
+                  }
+              });
+
+              console.log('VIDEO ended!!!!');
+          }
+      });
       video.currentTime = 0;
       video.play();
-  });
+});
 
+    // setTimeout(function() {
+    //   body.classList.add(hasOpenedState);
+
+    // items.forEach(function(item) {
+    //     if (boxAddress === item.getAttribute('data-box-address')) {
+    //         item.classList.add('_active');
+    //     }
+    // });
+    // }, 5600);
   }
+
+
 
   function showSaredButton() {
       const boxItems = document.querySelectorAll('.js-box-item');
