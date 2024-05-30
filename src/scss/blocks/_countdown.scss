@@ -1,95 +1,156 @@
 .countdown {
+  $measurements: 200px;
+  
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1/1;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding-top: 20px;
+  text-align: center;
 
-  @include media-breakpoint-up(xl) {
-    padding-top: 40px;
+  &__number {
+    position: relative;
+    display: inline-block;
+    text-shadow: 1px 0 4px #000;
+
+    @include font(80px, 1, 400, $second-font-family);
+
+    @include media-breakpoint-up(sm) {
+      @include font(130px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(160px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(170px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(190px, 1, 400, $second-font-family);
+    }
+
+    ._raffle-countdown & {
+      animation: numberScaling 8s linear infinite, countdown-color 8s linear infinite;
+    }
   }
 
-  @include media-breakpoint-up(xxl) {
-    padding-top: 60px;
-  }
-
-  &--offset-bottom {
-    margin-bottom: 250px;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: center;
+  &__timer {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
-    max-width: 281px;
-
-    @include media-breakpoint-up(sm) {
-      max-width: 400px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      max-width: 500px;
-    }
-
-    @include media-breakpoint-up(xxl) {
-      max-width: 600px;
-    }
+    height: 100%;
+    overflow: visible;
+    transform: rotateY(-180deg) rotateZ(-90deg);
   }
 
-  &__item {
-    display: flex;
-    width: calc(100% / 4);
-    gap: 10px;
-    flex-direction: column;
-    justify-content: center;
+  &__circle {
+    stroke-dasharray: 1256.129px;
+    stroke-dashoffset: 0;
+    stroke-width: 30px;
+    stroke-linecap: round;
+    stroke: red;
+    fill: rgba(255, 255, 255, 0.1);
 
-    @include media-breakpoint-up(md) {
-      gap: 10px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      gap: 16px;
-    }
-
-    @include media-breakpoint-up(xxl) {
-      gap: 18px;
+    ._raffle-countdown & {
+      animation: countdown 8s linear infinite;
     }
   }
+}
 
-  &__val {
-    text-align: center;
-    @include font(24px, 1, 400, $second-font-family);
-
-    @include media-breakpoint-up(sm) {
-      @include font(42px, 1, 400, $second-font-family);
-    }
-
-    @include media-breakpoint-up(md) {
-      @include font(44px, 1, 400, $second-font-family);
-    }
-
-    @include media-breakpoint-up(xl) {
-      @include font(58px, 1, 400, $second-font-family);
-    }
-
-    @include media-breakpoint-up(xxl) {
-      @include font(64px, 1, 400, $second-font-family);
-    }
+@keyframes countdown {
+  0% {
+    stroke: #8892ee;
+    stroke-dashoffset: 0px;
   }
+  
+  33% {
+    stroke: #B4BAEC;
+  }
+  
+  66% {
+    stroke: #FFBAAB;
+  }
+  
+  90% {
+    stroke: #F9E3B0;
+  }
+  
+  100% {
+    stroke: #efc156;
+    stroke-dashoffset: 1256.129px;
+  }
+}
 
-  &__label {
-    text-align: center;
-    color: #9f9f9f;
-    @include font(12px, 1);
 
-    @include media-breakpoint-up(md) {
-      @include font(16px, 1);
-    }
+@keyframes countdown-color {
+  0% {
+    color: #8892ee;
+  }
+  
+  33% {
+    color: #B4BAEC;
+  }
+  
+  66% {
+    color: #FFBAAB;
+  }
+  
+  90% {
+    color: #F9E3B0;
+  }
+  
+  100% {
+    color: #efc156;
+  }
+}
 
-    @include media-breakpoint-up(xl) {
-      @include font(22px, 1);
-    }
 
-    @include media-breakpoint-up(xxl) {
-      @include font(24px, 1);
-    }
+@keyframes numberScaling {
+  0% {
+    transform: scale(0.7);
+  }
+  
+  80% {
+    transform: scale(1.1);
+  }
+  
+  82.5% {
+    transform: scale(1.4);
+  }
+  
+  85% {
+    transform: scale(1.1);
+  }
+  
+  87.5% {
+    transform: scale(1.4);
+  }
+  
+  90% {
+    transform: scale(1.1);
+  }
+  
+  92.5% {
+    transform: scale(1.4);
+  }
+  
+  95% {
+    transform: scale(1.1);
+  }
+  
+  97.5% {
+    transform: scale(1.5);
+  }
+  
+  100% {
+    transform: scale(1.5);
   }
 }
