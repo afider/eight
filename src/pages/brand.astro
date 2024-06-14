@@ -81,6 +81,49 @@ const pageTitle = "ANON:Brand";
 
       <div class="brand__section">
         <div class="brand__header">
+          <h2 class="brand__title">Fonts</h2>
+        </div>
+
+        <div class="font-ex">
+          <div class="font-ex__body">
+            <div class="font-ex__section font-ex__section--heading">
+              <div class="font-ex__header">
+                <div class="font-ex__title">Inter Bold</div>
+                <div class="font-ex__legend">Heading</div>
+              </div>
+              <div class="font-ex__content">
+                <p class="font-ex__text">ANON mattis nulla dui sodales in sed mattis pulvinar</p>
+              </div>
+            </div>
+            <div class="font-ex__section font-ex__section--subtitle">
+              <div class="font-ex__header">
+                <div class="font-ex__title">Inter Medium</div>
+                <div class="font-ex__legend">Subtitle</div>
+              </div>
+              <div class="font-ex__content">
+                <p class="font-ex__text">ANON mattis nulla dui sodales in sed mattis pulvinar</p>
+              </div>
+            </div>
+            <div class="font-ex__section">
+              <div class="font-ex__header">
+                <div class="font-ex__title">Inter Regular</div>
+                <div class="font-ex__legend">Basic for text blocks</div>
+              </div>
+              <div class="font-ex__content">
+                <p class="font-ex__text font-ex__text--offset-bottom">ANON mattis nulla dui sodales in sed mattis pulvinar risus nulla sodales molestie lectus sapien augue molestie imperdiet molestie est. Et. Augue pulvinar odio. Amet morbi mattis justo sapien lacinia</p>
+                <p class="font-ex__text">ANON mattis nulla dui sodales in sed mattis pulvinar risus nulla sodales molestie lectus sapien augue molestie imperdiet molestie est. Et. Augue pulvinar odio. Amet morbi mattis justo sapien lacinia</p>
+              </div>
+            </div>
+          </div>
+          <div class="font-ex__footer">
+            <a href="/" class="font-ex__link">Download font family</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="brand__section">
+        <div class="brand__header">
           <h2 class="brand__title">Gradients</h2>
         </div>
         <div class="brand__logos">
@@ -152,14 +195,27 @@ const pageTitle = "ANON:Brand";
       </div>
 
       <div class="brand__section">
-        <div class="brand__header">
+        <div class="brand__header brand__header--desc">
           <h2 class="brand__title">Name</h2>
           <div class="brand__desc">
             <p class="brand__text">Correct spelling of&nbsp;the name. Use only capital letters just like a&nbsp;coin ticker $ANON</p>
           </div>
         </div>
-        <Sprite name="yep" class="xxx" />
-        <Sprite name="not" class="xxx" />
+
+        <div class="name-spelling">
+          <div class="name-spelling__item">
+            <Sprite name="yep" class="name-spelling__icon" />
+            <div class="name-spelling__title">ANON</div>
+          </div>
+          <div class="name-spelling__item name-spelling__item--not">
+            <Sprite name="not" class="name-spelling__icon" />
+            <div class="name-spelling__title">
+              <span class="name-spelling__variant">Anon</span>
+              <span class="name-spelling__variant">anon</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
