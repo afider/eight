@@ -1,0 +1,167 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Story from '@components/Story.astro';
+import RetroHero from '@components/RetroHero.astro';
+import ScoreTable from '@components/ScoreTable.astro';
+import RetroStatus from '@components/RetroStatus.astro';
+import { Sprite } from 'astro-icon';
+
+const pageTitle = "ANON:Brand";
+---
+
+<BaseLayout title={pageTitle}>
+  <div class="layout__section section">
+    <div class="section-header section-header--offset-bottom">
+      <h1 class="section-header__title title">Brand assets</h1>
+      <div class="section-header__desc">
+        <p class="section-header__text">The following rules must be&nbsp;followed when promoting ANON in&nbsp;digital or&nbsp;printed materials.</p>
+      </div>
+    </div>
+
+    <div class="brand">
+      <div class="brand__section">
+        <div class="brand__header">
+          <h2 class="brand__title">Logo</h2>
+        </div>
+        <div class="brand__logos">
+          <div class="brand-logo-grid">
+            <ul class="brand-logo-grid__list">
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo">
+                  <div class="brand-logo__frame">
+                    <img src="/src/assets/images/svg/anon-full-logo-dark.svg" alt="ANON Full Logo Dark Color." class="brand-logo__img">
+                  </div>
+                  <div class="brand-logo__legend">Light background logo <span class="brand-logo__value">#1D1018</span></div>
+                  <div class="brand-logo__footer link-controls">
+                    <a href="/" class="link-controls__item" type="button">png</a>
+                    <a href="/" class="link-controls__item" type="button">svg</a>
+                  </div>
+                </div>
+              </li>
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--dark-full">
+                  <div class="brand-logo__frame">
+                    <img src="/src/assets/images/svg/anon-full-logo-light.svg" alt="ANON Full Logo Dark Color." class="brand-logo__img">
+                  </div>
+                  <div class="brand-logo__legend">Dark background logo <span class="brand-logo__value">#FFFFFF</span></div>
+                  <div class="brand-logo__footer link-controls">
+                    <a href="/" class="link-controls__item" type="button">png</a>
+                    <a href="/" class="link-controls__item" type="button">svg</a>
+                  </div>
+                </div>
+              </li>
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo">
+                  <div class="brand-logo__frame">
+                    <img src="/src/assets/images/svg/anon-logo-short-on-light.svg" alt="ANON Short Logo Dark Color." class="brand-logo__img">
+                  </div>
+                  <div class="brand-logo__legend">Light background short logo <span class="brand-logo__value">#1D1018 #FFFFFF</span></div>
+                  <div class="brand-logo__footer link-controls">
+                    <a href="/" class="link-controls__item" type="button">png</a>
+                    <a href="/" class="link-controls__item" type="button">svg</a>
+                  </div>
+                </div>
+              </li>
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--dark-short">
+                  <div class="brand-logo__frame">
+                    <img src="/src/assets/images/svg/anon-logo-short-on-dark.svg" alt="ANON Short Logo Dark Color." class="brand-logo__img">
+                  </div>
+                  <div class="brand-logo__legend">Dark background short logo <span class="brand-logo__value">#1D1018 #FFFFFF</span></div>
+                  <div class="brand-logo__footer link-controls">
+                    <a href="/" class="link-controls__item" type="button">png</a>
+                    <a href="/" class="link-controls__item" type="button">svg</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand__section">
+        <div class="brand__header">
+          <h2 class="brand__title">Gradients</h2>
+        </div>
+        <div class="brand__logos">
+          <div class="brand-logo-grid">
+            <ul class="brand-logo-grid__list">
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--gradient-1">
+                  <div class="brand-logo__frame"></div>
+                  <div class="brand-logo__legend"><span class="brand-logo__value">#00B2FF</span></div>
+                </div>
+              </li>
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--gradient-2">
+                  <div class="brand-logo__frame"></div>
+                  <div class="brand-logo__legend"><span class="brand-logo__value">#FF017B</span></div>
+                </div>
+              </li>
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--gradient-3">
+                  <div class="brand-logo__frame"></div>
+                  <div class="brand-logo__legend"><span class="brand-logo__value">#FF9901</span></div>
+                </div>
+              </li>
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--gradient-4">
+                  <div class="brand-logo__frame"></div>
+                  <div class="brand-logo__legend"><span class="brand-logo__value">#8001FF</span></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand__section">
+        <div class="brand__header">
+          <h2 class="brand__title">Backgrounds</h2>
+        </div>
+        <div class="brand__logos">
+          <div class="brand-logo-grid brand-logo-grid--bg">
+            <ul class="brand-logo-grid__list">
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--bg-1 brand-logo--sq">
+                  <div class="brand-logo__frame"></div>
+                  <div class="brand-logo__footer link-controls">
+                    <a href="/" class="link-controls__item" type="button">png</a>
+                  </div>
+                </div>
+              </li>
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--bg-2 brand-logo--sq">
+                  <div class="brand-logo__frame"></div>
+                  <div class="brand-logo__footer link-controls">
+                    <a href="/" class="link-controls__item" type="button">png</a>
+                  </div>
+                </div>
+              </li>
+              <li class="brand-logo-grid__item">
+                <div class="brand-logo brand-logo--bg-3 brand-logo--sq">
+                  <div class="brand-logo__frame"></div>
+                  <div class="brand-logo__footer link-controls">
+                    <a href="/" class="link-controls__item" type="button">png</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand__section">
+        <div class="brand__header">
+          <h2 class="brand__title">Name</h2>
+          <div class="brand__desc">
+            <p class="brand__text">Correct spelling of&nbsp;the name. Use only capital letters just like a&nbsp;coin ticker $ANON</p>
+          </div>
+        </div>
+        <Sprite name="yep" class="xxx" />
+        <Sprite name="not" class="xxx" />
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>
